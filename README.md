@@ -8,4 +8,4 @@ I like cookies
 
 This is a [link to google ](https://www.google.com).
 
-In VS code, press crtl +shift+v to preview the code
+In VS code, press crtl +shift+v to preview the code 
