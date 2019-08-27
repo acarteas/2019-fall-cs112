@@ -14,6 +14,7 @@ file to your repository.
 
 ## Resources
 In completing this assignment, the following resources may be of use:
+* [Pull requests in Github](https://help.github.com/en/articles/creating-a-pull-request)
 * [Version control in VSC](https://code.visualstudio.com/docs/editor/versioncontrol)
 * [Resolving conflict in TortoiseGit](https://tortoisegit.org/docs/tortoisegit/tgit-dug-conflicts.html)
 * [Github cheat sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
