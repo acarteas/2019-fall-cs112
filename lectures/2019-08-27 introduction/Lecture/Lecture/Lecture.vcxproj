@@ -126,9 +126,6 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="readme.md" />
-  </ItemGroup>
-  <ItemGroup>
     <Text Include="FirstNames.txt" />
     <Text Include="LastNames.txt" />
   </ItemGroup>
