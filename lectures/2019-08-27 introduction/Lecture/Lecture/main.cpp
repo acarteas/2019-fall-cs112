@@ -24,30 +24,35 @@ string removeAdjacentDuplicates(string original)
 	    }
 	}
 
-    for (int j = 0; j < wordCount; j++)
-    {   
+    do {   
         iss >> current;
         iss >> next;
         
+        wordCount--;
+        
         if (current == next) {
-            result = result + current + " ";
+            if (current != currentOld && next != currentOld && next != nextOld) {
+                result = result + current + " ";
+            }
+            wordCount--;
         }
         else if (current == nextOld) {
             result = result + next + " ";
+            wordCount--;
         }
-        else {
+        else if (wordCount > 0) {
             result = result + current + " " + next + " ";
         }
-        
-        wordCount--;
         
         currentOld = current;
         nextOld = next;
     } 
+    while (wordCount > 0);
+    
 	return result;
 }
 
 int main(void)
 {
-	cout << removeAdjacentDuplicates("I I went to to the the store this morning");
+	cout << removeAdjacentDuplicates("I I went went went to to to to the the the the the store this morning morning morning"); //edited string to test more duplicate scenarios
 }
