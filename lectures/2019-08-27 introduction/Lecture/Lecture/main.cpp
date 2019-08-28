@@ -1,4 +1,5 @@
 #include <iostream>
+#include <sstream>
 #include <string>
 using namespace std;
 
@@ -9,12 +10,37 @@ string removeAdjacentDuplicates(string original)
 	string current;
 	string next;
 	string result;
-	for (int i = 0; i < original.length() - 1; i++)
+    istringstream iss;
+    int wordcount = 0;
+
+    iss.str (original);
+
+    for (int i = 0; i < original.length() - 1; i++)
 	{
-		int space_index = original.find(' ', i);
-		//string temp = original.substr(0, i);
-		cout << space_index << endl;
-	}
+	    if (original.find(' ', i)) {
+	        wordcount++;
+	    }
+
+    for (int j = 0; j < wordcount; j++)
+    {   
+        iss >> current;
+        iss >> next;
+        
+        if (current == next) {
+            result = result + " " + current;
+        }
+        else {
+            result = result + " " + current + " " + next;
+        }
+    } 
+
+	//
+
+	//	next = original.substr(0, i);
+
+	//}
+	
+	cout << result;
 	return result;
 }
 
