@@ -15,11 +15,12 @@ string removeAdjacentDuplicates(string original)
 
     iss.str (original);
 
-    for (int i = 0; i < original.length() - 1; i++)
+    for (int i = 0; i < original.length() - 1; i++)  //tbis compares a signed int to an unsigned int, maybe revise
 	{
 	    if (original.find(' ', i)) {
 	        wordcount++;
 	    }
+	}
 
     for (int j = 0; j < wordcount; j++)
     {   
@@ -33,18 +34,10 @@ string removeAdjacentDuplicates(string original)
             result = result + " " + current + " " + next;
         }
     } 
-
-	//
-
-	//	next = original.substr(0, i);
-
-	//}
-	
-	cout << result;
 	return result;
 }
 
 int main(void)
 {
-	removeAdjacentDuplicates("I I went to the the store this morning");
+	cout << removeAdjacentDuplicates("I I went to the the store this morning");
 }
