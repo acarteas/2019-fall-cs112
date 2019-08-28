@@ -8,36 +8,46 @@ using namespace std;
 string removeAdjacentDuplicates(string original)
 {
 	string current;
+	string currentOld;
 	string next;
+	string nextOld;
 	string result;
     istringstream iss;
-    int wordcount = 0;
+    int wordCount = 0;
 
     iss.str (original);
 
     for (int i = 0; i < original.length() - 1; i++)  //tbis compares a signed int to an unsigned int, maybe revise
 	{
-	    if (original.find(' ', i)) {
-	        wordcount++;
+	    if (original[i] == ' ') {
+	        wordCount = wordCount + 1;
 	    }
 	}
 
-    for (int j = 0; j < wordcount; j++)
+    for (int j = 0; j < wordCount; j++)
     {   
         iss >> current;
         iss >> next;
         
         if (current == next) {
-            result = result + " " + current;
+            result = result + current + " ";
+        }
+        else if (current == nextOld) {
+            result = result + next + " ";
         }
         else {
-            result = result + " " + current + " " + next;
+            result = result + current + " " + next + " ";
         }
+        
+        wordCount--;
+        
+        currentOld = current;
+        nextOld = next;
     } 
 	return result;
 }
 
 int main(void)
 {
-	cout << removeAdjacentDuplicates("I I went to the the store this morning");
+	cout << removeAdjacentDuplicates("I I went to to the the store this morning");
 }
