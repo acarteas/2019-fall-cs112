@@ -1,4 +1,5 @@
 #include <iostream>
+#include <sstream>
 #include <string>
 using namespace std;
 
@@ -7,18 +8,51 @@ using namespace std;
 string removeAdjacentDuplicates(string original)
 {
 	string current;
+	string currentOld;
 	string next;
+	string nextOld;
 	string result;
-	for (int i = 0; i < original.length() - 1; i++)
+    istringstream iss;
+    int wordCount = 0;
+
+    iss.str (original);
+
+    for (int i = 0; i < original.length() - 1; i++)  //tbis compares a signed int to an unsigned int, maybe revise
 	{
-		int space_index = original.find(' ', i);
-		//string temp = original.substr(0, i);
-		cout << space_index << endl;
+	    if (original[i] == ' ') {
+	        wordCount = wordCount + 1;
+	    }
 	}
+
+    do {   
+        iss >> current;
+        iss >> next;
+        
+        wordCount--;
+        
+        if (current == next) {
+            if (current != currentOld && next != currentOld && next != nextOld) {
+                result = result + current + " ";
+            }
+            wordCount--;
+        }
+        else if (current == nextOld) {
+            result = result + next + " ";
+            wordCount--;
+        }
+        else if (wordCount > 0) {
+            result = result + current + " " + next + " ";
+        }
+        
+        currentOld = current;
+        nextOld = next;
+    } 
+    while (wordCount > 0);
+    
 	return result;
 }
 
 int main(void)
 {
-	removeAdjacentDuplicates("I I went to the the store this morning");
+	cout << removeAdjacentDuplicates("I I went went went to to to to the the the the the store this morning morning morning"); //edited string to test more duplicate scenarios
 }
