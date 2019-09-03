@@ -8,7 +8,8 @@
 #include <string>
 using namespace std;
 
-// imageProcessor()
+// imageProcessor() --> Analyzes file "tinypix.ppm" and preforms special processing 
+//                      based on the line of the file.
 
 void imageProcessor()
 {
