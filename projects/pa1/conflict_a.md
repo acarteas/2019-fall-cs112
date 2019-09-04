@@ -1,0 +1,1 @@
+This is conflict.md
