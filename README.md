@@ -1,6 +1,8 @@
 # 2019-fall-cs112
 Course repository for 2019 fall semester of cs 112
 
+This is Vanja Venezia's CS112 Github Respository
+
 ## Want to become a better programmer?  
 Check out the following links:
 1. [Hacker Rank](https://www.hackerrank.com/domains/cpp)
