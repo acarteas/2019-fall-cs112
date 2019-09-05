@@ -32,12 +32,12 @@ For the second part of the assignment, I used an [Article On Creating Branches](
     git branch SampleConflict # Create branch sample conflict
     git branch # Verifies branch creation
     git checkout Master # Move to master branch
-    mv SampleConflict_a.md SampleConflict.md # Renames file a
+    mv SampleConflict_a.md SampleConflict.md # Renames SampleConflict_a.md
     git add .
     git commit -m "Renamed SampleConflict_a.md"
     git push
     git checkout SampleConflict
-    mv SampleConflict_b.md SampleConflict.md # Renames flie b
+    mv SampleConflict_b.md SampleConflict.md # Renames SampleConflict_b.md
     git add .
     git commit -m "Renamed SampleConflict_b.md"
     git push
