@@ -13,6 +13,9 @@ I like to climb.
 
 * Code Academy: [Code Academy](https://www.codecademy.com/learn/learn-c-plus-plus)
 
+## Want Help?
+* Visit [my discussion forum](https://forum.lumberhacks.org/)!
+
 ## Windows Software
 * (*necessary*) [Git for Windows](https://git-scm.com/download/win)
 * (optional) [TortoiseGit](https://tortoisegit.org/download/)

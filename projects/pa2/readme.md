@@ -34,9 +34,9 @@ In completing this assignment, the following resources may be of use:
 This assignment is due Monday, September 16, 2019.  
 
 ## Submission
-To submit your assignment, simply have your repository checked in on time.
+To submit your assignment, check your PA #2 code into *the same folder as this readme.*  Then, create a [PA #2 release on github](https://help.github.com/en/articles/creating-releases).
 
 ## Grading
 This assignment is worth 50 points:
 * 45 points for completing the task (demonstrate good progress, regular github checkins, good github comments, maintaining your project board)
-* 5 points for your reflection
+* 5 points for your reflection.  For inspiration, see [my prompts](../../docs/sample_reflection.md) 
