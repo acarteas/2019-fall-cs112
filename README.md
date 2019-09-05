@@ -1,4 +1,3 @@
-master
 # Jay Revolinsky's CS 112 Repository
 This is where I store my CS 112 Files
 
