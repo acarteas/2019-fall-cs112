@@ -1,0 +1,16 @@
+While working on the PA#1 I had trouble making the initial pull request. I could find 
+the pull request button but when I tried to follow the link that had the instructions
+ on how to pull I found myself unable to find the new info on my repository. When I 
+went to your office hours, the information on how to pull was different then the 
+information on the link and I realized I would have never figured it out on my own. 
+Later, I tried to help one of my classmates do their pull request; however, the same 
+information was not coming up as it did for me.
+
+I would have been helpful to go over how to do the pull requests in class since they 
+are more convoluted then how one finds to do them online. I know that I would have 
+benefited from it, as well as many of my classmates. 
+
+For the other part of the homework, having two files named the same and merging them, 
+I found little to no trouble. It took me a few minutes of trying how to merge them, 
+rather than replacing one with the other; however, I think I figured it out and it was 
+doable on one’s own time to figure out. 
