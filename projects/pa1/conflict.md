@@ -1,2 +1,2 @@
 This is conflict_a.md
-//needed to commit
+This is conflict_b.md//needed to commit
