@@ -1,6 +1,0 @@
-
-Blake Callison
-
-I found this homework to be particularly difficult because it included many aspects that are new to me. First off is the concept of git; I still don't completely understand it.
-It took me a long time just to find out about this homework because I didn't know how to pull the new files from the professors repository. Truthfully, I had my brother help me out a lot
-especially with the merging aspect of this assignment though he tried to get me to do it through powershell but that would have caused even more confusion. I did learn though, the difference between a commit vs a push which helped clear up some questions I had. Though I still don't fully understand the process of merging as my file I pushed didn't have both the contents of a and b but my brother said it was correct. It could have been that his girlfriend had just got home and she wanted his attention and I was put to the way-side... Anyways, I would suggest going forward that the overall concept of git be explained a little bit more in lecture or even better, lab. I apologize that this was submitted so late, like I said I didn't even know this existed until yesterday during lecture. 
