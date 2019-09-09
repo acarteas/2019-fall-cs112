@@ -11,23 +11,18 @@ using namespace std;
 // imageProcessor() --> Analyzes file "tinypix.ppm" and preforms special processing 
 //                      based on the line of the file.
 
-void imageProcessor()
+void imageProcessor(string input_file)
 {
 	string line;
 
 	ifstream picdata;
-	picdata.open("tinypix.ppm");
+	picdata.open(input_file);
 
 	int count = 0;
 
-	for (int count; (count < 7); count++)
+	for (int count; picdata.eof() == false; count++)
 	{
-		if ((picdata.eof() == true))
-		{
-			// Tests If File Ends (If End of File, End the Loop):
-			count = 7;
-		}
-		else if (count == 0)
+		if (count == 0)
 		{
 			// First Line (Image Format):
 			getline(picdata, line);
@@ -59,5 +54,15 @@ void imageProcessor()
 
 int main(void)
 {
-	imageProcessor();
+	string original_pic = "tinypix.ppm";
+	string testpic_a = "";
+	string testpic_b = "";
+
+	cout << "Testing tinypix.ppm:" << endl;
+	imageProcessor(original_pic);
+	cout << "========================================" << endl;
+	cout << endl;
+
+
+	return EXIT_SUCCESS;
 }
