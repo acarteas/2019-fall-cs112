@@ -16,7 +16,7 @@ void imageProcessor(string input_file)
 	string line;
 
 	ifstream picdata;
-	picdata.open(input_file);
+	picdata.open(input_file.c_str());
 
 	int count = 0;
 
@@ -55,14 +55,22 @@ void imageProcessor(string input_file)
 int main(void)
 {
 	string original_pic = "tinypix.ppm";
-	string testpic_a = "";
-	string testpic_b = "";
+	string testpic_a = "testpic_a.ppm";
+	string testpic_b = "testpic_b.ppm";
 
 	cout << "Testing tinypix.ppm:" << endl;
 	imageProcessor(original_pic);
 	cout << "========================================" << endl;
 	cout << endl;
 
+	cout << "Testing testpic_a.ppm:" << endl;
+	imageProcessor(testpic_a);
+	cout << "========================================" << endl;
+	cout << endl;
 
-	return EXIT_SUCCESS;
+	cout << "Testing testpic_b.ppm:" << endl;
+	imageProcessor(testpic_b);
+	cout << "========================================" << endl;
+	cout << endl;
+
 }
