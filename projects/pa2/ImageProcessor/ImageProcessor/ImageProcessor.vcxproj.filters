@@ -20,13 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\testpic_a.ppm">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\..\testpic_b.ppm">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\..\tinypix.ppm">
+    <None Include="tinypix.ppm">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

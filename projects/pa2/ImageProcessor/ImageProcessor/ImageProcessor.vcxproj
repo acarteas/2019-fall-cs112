@@ -126,9 +126,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\testpic_a.ppm" />
-    <None Include="..\..\testpic_b.ppm" />
-    <None Include="..\..\tinypix.ppm" />
+    <None Include="tinypix.ppm" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
