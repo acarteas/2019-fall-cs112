@@ -11,14 +11,23 @@ using namespace std;
 
 
 
-int main()
+int main(void)
 {
-	ifstream my_in_stream;
+	ifstream myfile;
+	string line; 
 
-	my_in_stream.open(tinypix.ppm);
+	myfile.open("tinypix.ppm");
+	
+	while ( getline(myfile, line));
+	{
+		cout << line << "\n";
+	}
+
+	myfile.close();
+	
 
 
 
-
+	return 0;
 
 }
