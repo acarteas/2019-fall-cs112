@@ -11,9 +11,12 @@ using namespace std;
 
 
 
-int main(void)
+int main()
 {
-	
+	ifstream my_in_stream;
+
+	my_in_stream.open(tinypix.ppm);
+
 
 
 
