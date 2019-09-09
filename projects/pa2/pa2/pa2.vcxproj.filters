@@ -23,5 +23,8 @@
     <None Include="tinypix.ppm">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="readme.md">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
