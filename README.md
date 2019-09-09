@@ -1,4 +1,4 @@
-# 2019-fall-cs112
+# 2019-fall-cs112 - Ryan Beck
 Course repository for 2019 fall semester of cs 112
 
 ## Want Help?
