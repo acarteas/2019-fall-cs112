@@ -8,5 +8,7 @@ using namespace std;
 
 string readLine(string prompt);
 int readInt(string prompt);
+int toInt(string input);
+
 
 #endif // !HELPER_FUNCTIONS_H
