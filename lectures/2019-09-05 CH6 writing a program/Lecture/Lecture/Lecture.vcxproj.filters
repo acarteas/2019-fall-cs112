@@ -21,6 +21,9 @@
     <ClCompile Include="HelperFunctions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="FirstNames.txt">
@@ -32,6 +35,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HelperFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main_test.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
