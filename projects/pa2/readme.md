@@ -38,7 +38,7 @@ To submit your assignment, check your PA #2 code into *the same folder as this r
 
 ## Example Walkthrough Image
 Here is an image that I made running some lecture code.  Yours should look pretty similar but with PA #2.
-![walkthrough]https://imgur.com/a/d56YByH  
+![walkthrough](https://imgur.com/a/d56YByH)  
 
 ## Grading
 This assignment is worth 50 points:
