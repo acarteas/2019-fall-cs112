@@ -17,16 +17,37 @@ void imageProcessor(string input_file)
 	ifstream picdata;
 	picdata.open(input_file.c_str());
 
-	
 	// First Line (Image Format):
 	getline(picdata, line);
-	cout << "Image Format: " << line << endl;
+	if (line[0] == '#')
+	{
+		cout << "Comment: " << line << endl;
+		getline(picdata, line);
+		cout << "Image Format: " << line << endl;
+	}
+	else
+	{
+		cout << "Image Format: " << line << endl;
+	}
 	
-	// Second Line (Delimits the Two Integers):
-	getline(picdata, line, ' ');
-	cout << "Height: " << line << endl;
+	// Second Line (Delimits the Two Integers by a space (\' \'):
 	getline(picdata, line);
-	cout << "Width: " + line << endl;
+
+	if (line[0] == '#')
+	{
+		cout << "Comment: " << line << endl;
+		getline(picdata, line, ' ');
+		cout << "Height: " << line << endl;
+		getline(picdata, line);
+		cout << "Width: " + line << endl;
+	}
+	else
+	{
+		cout << "Height: " << line << endl;
+		getline(picdata, line);
+		cout << "Width: " + line << endl;
+	}
+	
 	
 	// Third Line (Max Pixel Value):
 	getline(picdata, line);
@@ -45,9 +66,5 @@ void imageProcessor(string input_file)
 
 int main(void)
 {
-	cout << "Testing tinypix.ppm:" << endl;
 	imageProcessor("tinypix.ppm");
-	cout << "========================================" << endl;
-	cout << endl;
-
 }
