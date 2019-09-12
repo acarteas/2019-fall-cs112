@@ -1,4 +1,8 @@
 # CS 112 PA #2
+
+![PA2 Success GIF](/pa2.gif)
+
+
 This assignment begins our multi-week assignment related to image processing.  We will begin very simply but will end up with a complete program capable of applying several effects to multiple image types.  
 
 For this assignment, your task is straightforward: You must read the file "tinypix.ppm" and output its contents to the screen.  However, to make things a bit more complex, you must perform special processing on the first three lines.
