@@ -23,7 +23,7 @@ int main(void)
 
 	myfile.open("tinypix.ppm");
 	
-	//use getline outside the while loop for the first three line
+	//use getline outside the while loop for the first five lines
 	//Then while loop for the rest
 
 	getline(myfile, line1);
