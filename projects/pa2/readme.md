@@ -1,6 +1,6 @@
-# CS 112 PA #2
+# CS 112 PA #2 - Vanja Venezia
 
-![PA2 Success GIF](/pa2.gif)
+![PA2 Success GIF](https://github.com/vv52/2019-fall-cs112/blob/master/projects/pa2/pa2.gif)
 
 
 This assignment begins our multi-week assignment related to image processing.  We will begin very simply but will end up with a complete program capable of applying several effects to multiple image types.  
