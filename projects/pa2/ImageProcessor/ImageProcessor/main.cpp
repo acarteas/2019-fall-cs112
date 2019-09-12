@@ -19,34 +19,14 @@ void imageProcessor(string input_file)
 
 	// First Line (Image Format):
 	getline(picdata, line);
-	if (line[0] == '#')
-	{
-		cout << "Comment: " << line << endl;
-		getline(picdata, line);
-		cout << "Image Format: " << line << endl;
-	}
-	else
-	{
-		cout << "Image Format: " << line << endl;
-	}
+	cout << "Image Format: " << line << endl;
 	
 	// Second Line (Delimits the Two Integers by a space (\' \'):
+	getline(picdata, line, ' ');
+	cout << "Height: " << line << endl;
 	getline(picdata, line);
-
-	if (line[0] == '#')
-	{
-		cout << "Comment: " << line << endl;
-		getline(picdata, line, ' ');
-		cout << "Height: " << line << endl;
-		getline(picdata, line);
-		cout << "Width: " + line << endl;
-	}
-	else
-	{
-		cout << "Height: " << line << endl;
-		getline(picdata, line);
-		cout << "Width: " + line << endl;
-	}
+	cout << "Width: " + line << endl;
+	
 	
 	
 	// Third Line (Max Pixel Value):
