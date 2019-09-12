@@ -32,6 +32,8 @@ void imageProcessor(string input_file)
 	// Third Line (Max Pixel Value):
 	getline(picdata, line);
 	cout << "Max Pixel Value: " << line << endl;
+
+	// Prints Data Header:
 	cout << "Data: " << endl;
 	
 	while (picdata.eof() == false)
