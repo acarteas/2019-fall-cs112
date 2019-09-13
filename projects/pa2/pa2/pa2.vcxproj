@@ -124,7 +124,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="main2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="tinypix.ppm" />
