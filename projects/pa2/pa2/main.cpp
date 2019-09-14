@@ -3,7 +3,11 @@
 #include <fstream>
 #include <sstream>
 using namespace std;
-
+/*
+signature: string -> void
+purpose: expects a string which represent a file name and returns nothing, but has
+the side effect of printing to the screen with respective formatting. 
+*/
 
 void image_file(string file_name)
 {
@@ -29,6 +33,8 @@ void image_file(string file_name)
 		 
 	file_to_read.close();
 }
+
+
 
 int main(void)
 {
