@@ -23,7 +23,7 @@ string my_Test(string sentence)
 	return "done";
 }
 */
-string my_Test2(string original)
+/*string my_Test2(string original)
 {
 	int index = 0;
 	string final;
@@ -34,22 +34,39 @@ string my_Test2(string original)
 		word = original.substr(index, space_index - index); // take a substr of original from 0 or the next space and assignit to word
 		cout << word << endl; //print that word
 		
-		if (space_index == -1)
-		{
-			index = original.length();
-		}
-		else
-		{
-			index = space_index + 1;
-		}
+		
 
 		
 		final = word;
 	}
 	return final;
 }
+*/
+
 
 int main()
 {
-	string new_string = my_Test2("this is a sentence blah blah blah");
+	string line;
+	string line1;
+	string line2;
+	string part1;
+	string part2;
+	string line3;
+	ifstream ppm1("tinypix.ppm");
+	
+	getline(ppm1, line1);
+	getline(ppm1, line2);
+	part1 = line2.substr(0, 1);
+	part2 = line2.substr(1, 2);
+	getline(ppm1, line3);
+	cout << "Image Format: " << line1 << endl;
+	cout << "Width: "<< part1 << endl;
+	cout << "Height: " << part2 << endl;
+	cout << "Max Pixel Value: " << line3 << endl;
+
+	while (getline(ppm1, line)) {
+		cout << line << endl;
+	}
+	ppm1.close();
+	return 0;
 }
