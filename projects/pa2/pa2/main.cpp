@@ -35,11 +35,12 @@ int main(void)
 	getline(myfile, line3);
 	cout << "Height: " << line3 << endl;
 
-	getline(myfile, line4, ' ');
+	getline(myfile, line4);
 	cout << "Max Pixel Value: " << line4 << endl;
 
-	getline(myfile, line5, ' ');
-	cout << "Data: " << line5 << endl;
+	getline(myfile, line5);
+	cout << "Data: " << endl << line5 << endl;
+	
 
 	while (getline(myfile, line6))
 	{
@@ -47,9 +48,6 @@ int main(void)
 	}
 
 	myfile.close();
-	
-	
-
 
 
 	return 0;
