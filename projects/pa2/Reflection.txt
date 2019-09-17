@@ -1,0 +1,24 @@
+While working on the second homework, I ran into an interesting problem. 
+While trying to start my code for the assignment, every time I ran the code, 
+I would get an unable to build code error. I was confused, and even basic code 
+that I knew would work had refused to run. After about an hour of opening new 
+projects, deleting old ones, and trying different code, the issue somehow 
+resolved itself. Once the program was no longer giving me a build error, things 
+when quite smooth.
+
+Summer and I had decided to tackle the assignment together, and while typing the 
+code to print out the necessary information from the file, I had forgotten to delete
+a line of code that from me making sure that the program was willing to build. I 
+was confused as to why the first line of the text wasn’t showing, and I realized that 
+I had a getline before my loop. Once deleted everything showed; however, that line that
+I had just deleted was the key to be able to add the text in front of the need lines. 
+	
+The next issue that we need to resolve was how to split the height and width into two 
+lines, and after looking up some more information on getline, it was easy enough to do 
+with a few more lines of code.
+	
+Once the code was done, the next thing was creating the gif. Once the program was 
+downloaded onto my laptop it went quick, but since Summer has a Mac, she ended up 
+emailing her code to herself and creating the gif on my computer since she didn’t want to 
+download a virus from looking up LICE on the internet because the download that you 
+provided didn’t work with MacBooks. 
