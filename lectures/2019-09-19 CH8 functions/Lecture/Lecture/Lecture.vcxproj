@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FileHelpers.cpp" />
     <ClCompile Include="HelperFunctions.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -131,8 +132,11 @@
     <Text Include="LastNames.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FileHelpers.h" />
     <ClInclude Include="HelperFunctions.h" />
-    <ClInclude Include="main_test.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tinypix.ppm" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

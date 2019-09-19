@@ -8,7 +8,7 @@ using namespace std;
 
 string readLine(string prompt);
 int readInt(string prompt);
-int toInt(string input);
+int getRand(int min, int max);
 
 
 #endif // !HELPER_FUNCTIONS_H
