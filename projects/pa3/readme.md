@@ -1,7 +1,11 @@
 # CS 112 PA #3
 This assignment continues our multi-week assignment related to image processing.  We will begin very simply but will end up with a complete program capable of applying several effects to multiple image types.  
 
-For this assignment, you will be manipulating the "data" identified in your PA #2 assignment.  Your task is to turn every 3rd number (starting with element 0) in the data component to a zero.  Second, you program must now prompt the user for the file to manipulate instead of hard-coding "tinypix.ppm".  Lastly, your program should write this modified file to a user-specifid location.  Below, I provide an example run of the program: 
+For this assignment, you will be manipulating the "data" identified in your PA #2 assignment.  
+
+Your task is to turn every 3rd number (starting with element 0) in the data component to a zero.
+Second, you program must now prompt the user for the file to manipulate instead of hard-coding "tinypix.ppm". 
+Lastly, your program should write this modified file to a user-specified location.  Below, I provide an example run of the program: 
 
 ## Example program run
 ```
