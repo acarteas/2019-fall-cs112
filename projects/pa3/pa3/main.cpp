@@ -17,6 +17,7 @@
 
 #include <iostream>
 #include <string>
+#include <sstream>
 #include <fstream>
 #include <vector>
 using namespace std;
@@ -35,6 +36,9 @@ int main(void)
 	vector<string> data;
 	ifstream imgFile;
 	ofstream imgEdit;
+	istringstream dummy;
+	string currentLine;
+	string currentNum;
 
 	cout << "Enter source file: ";
 	cin >> fileName;
@@ -55,17 +59,36 @@ int main(void)
 	}
 
 	imgFile.close();
-	
+	/*
+	for (int j = 0; j < data.size(); j++)
+	{
+		dummy.str(data[j]);
+		while (dummy.good())
+		{
+			getline(dummy, currentNum, ' ');
+			if (currentNum != "0")
+			{
+				currentNum = "0";
+			}
+			currentLine += currentNum;
+			getline(dummy, currentNum, ' ');
+			getline(dummy, currentNum, ' ');
+		}
+		data[j] = currentLine;
+	}
+	*/
 	imgEdit.open(outputName);
 	imgEdit << format << "\n";
-	imgEdit << width << "\n";
+	imgEdit << width << " ";
 	imgEdit << height << "\n";
-	imgEdit << mpv << "\n";
+	imgEdit << mpv;
 	for (int i = 0; i < data.size(); i++)
 	{
 		imgEdit << data[i] << "\n";
 	}
 	
+	imgEdit.close();
+
 	cout << "Program complete";
 
 	return 0;
