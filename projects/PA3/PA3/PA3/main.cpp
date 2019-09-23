@@ -25,7 +25,7 @@ it into the desired output file.
 				if(source_file.good() == true)
 				{
 				...
-				within this will need the getline then while loop
+				within this will need the getline then while loop - maybe
 				}
 
 				else
