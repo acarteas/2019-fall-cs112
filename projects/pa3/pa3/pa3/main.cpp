@@ -21,11 +21,13 @@ void image_file(string file_name)
 	ofstream file_to_write;
 
 	file_to_read.open(file_name);
-
+	file_to_write.open(file_name);
 	cout << "Enter the name of the file you wish to open: " << endl;
 		getline(cin, file_name);
 	cout << "Enter the name of the file you wish to write to: " << endl;
 		getline(cin, file_name);
+		
+		
 		
 	while (!file_to_read.eof())
 	{
@@ -34,7 +36,7 @@ void image_file(string file_name)
 		vector<int> file_vector;
 	for (int i=0; i < 24; i++)
 		{
-			if (		i % 3 == 0)
+			if (i % 3 == 0)
 			{
 				a[i] = 0;
 				cout << line_to_read << endl;
