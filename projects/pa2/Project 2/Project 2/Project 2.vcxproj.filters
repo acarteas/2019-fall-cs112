@@ -18,6 +18,12 @@
     <None Include="..\..\tinypix.ppm">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="..\..\..\sample files\blocks.ppm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\..\sample files\bunny.ppm">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
