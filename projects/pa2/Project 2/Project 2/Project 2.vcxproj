@@ -19,8 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\sample files\blocks.ppm" />
-    <None Include="..\..\..\sample files\bunny.ppm" />
     <None Include="..\..\tinypix.ppm" />
   </ItemGroup>
   <ItemGroup>
