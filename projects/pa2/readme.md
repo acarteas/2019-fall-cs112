@@ -34,7 +34,11 @@ In completing this assignment, the following resources may be of use:
 This assignment is due Monday, September 16, 2019.  
 
 ## Submission
-To submit your assignment, check your PA #2 code into *the same folder as this readme.*  Then, create a [PA #2 release on github](https://help.github.com/en/articles/creating-releases).
+To submit your assignment, check your PA #2 code into *the same folder as this readme.*  Next, create an GIF walkthrough of your program using [LICEcap](https://forum.lumberhacks.org/viewtopic.php?f=10&t=9).  Upload this image to your repository and put a link to the image in your reflection. *Be sure to place your reflection in this folder!* Lastly, create a [PA #2 release on github](https://help.github.com/en/articles/creating-releases).  
+
+## Example Walkthrough Image
+Here is an image that I made running some lecture code.  Yours should look pretty similar but with PA #2.
+![walkthrough](example.gif)  
 
 ## Grading
 This assignment is worth 50 points:
