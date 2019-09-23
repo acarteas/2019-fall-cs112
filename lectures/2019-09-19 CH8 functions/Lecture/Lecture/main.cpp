@@ -46,6 +46,7 @@ int main(int argc, char* argv[])
 		if (i % 2 == 0)
 		{
 			cout << "even: " << data[i] << endl;
+			
 		}
 		else
 		{
