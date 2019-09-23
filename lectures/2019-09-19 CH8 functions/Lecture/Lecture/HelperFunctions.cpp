@@ -1,9 +1,6 @@
 #include "HelperFunctions.h"
 #include <iostream>
 #include <exception>
-#include <cmath>
-#include <ctime>
-
 using namespace std;
 string readLine(string prompt)
 {
@@ -51,16 +48,4 @@ int readInt(string prompt)
 	}
 
 	return number;
-}
-
-bool has_seeded = false;
-int getRand(int min, int max)
-{
-	if (has_seeded == false)
-	{
-		srand(time(NULL));
-		has_seeded = true;
-	}
-	int some_value = (rand() % (max + 1 - min)) + min;
-	return some_value;
 }
