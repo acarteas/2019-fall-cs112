@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <string>
   
 using namespace std;
 
@@ -18,11 +19,12 @@ int main(void)
 		return 0;
 	}
 	 
-	while (myFile >> x)
+	while (myFile.good() == true)
 	{
-		sum = sum + x;
-
+		string line;
+		getline(myFile, line);
+		cout << line << endl;
 	}
-	cout << "The file was open";
+	
 	myFile.close();
 }
