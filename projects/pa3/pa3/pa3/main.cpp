@@ -7,7 +7,7 @@
 using namespace std;
 
 /*
-signature: ifstream ofstream -> void
+signature: what_file: ifstream ofstream -> void
 purpose: Expects an ifstream and an ofstream with a side effect 
 of prompting the user for the file names.
 */
