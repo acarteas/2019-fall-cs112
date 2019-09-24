@@ -14,31 +14,7 @@ of prompting the user for the file names.
 void what_file(ifstream& input_stream, ofstream& output_stream); //declaring function
 
 const int NUM_HEADER_LINES = 3;
-
 		
-/*
-	while (!file_to_read.eof())
-	{
-		int a[24];
-		getline(file_to_read, line_to_read); //prompts user for file name
-		vector<int> file_vector;
-	for (int i=0; i < 24; i++)
-		{
-			if (i % 3 == 0)
-			{
-				a[i] = 0;
-				cout << line_to_read << endl;
-			}
-
-		}
-	
-	}
-
-	file_to_read.close();
-}
-
-*/
-
 int main(void)
 {
 	ifstream input_stream;
@@ -58,6 +34,7 @@ int main(void)
 			header_info.push_back(line_to_read);
 		}
 	}
+
 	//Reading the body of the file
 	while (input_stream.good() == true)
 	{
