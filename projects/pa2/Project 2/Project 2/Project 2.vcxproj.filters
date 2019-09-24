@@ -18,6 +18,9 @@
     <None Include="..\..\tinypix.ppm">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="output.ppm">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
