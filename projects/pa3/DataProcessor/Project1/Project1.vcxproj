@@ -125,14 +125,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="dataProcessor.h" />
+    <ClInclude Include="fileHelpers.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dataProcessor.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="fileHelpers.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="blocks.ppm" />
     <Text Include="bunny.ppm" />
+    <Text Include="Text.txt" />
     <Text Include="tinypix.ppm" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

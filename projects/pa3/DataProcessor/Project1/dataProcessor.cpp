@@ -1,4 +1,5 @@
 #include "dataProcessor.h"
+#include "fileHelpers.h"
 #include <iostream>
 #include <sstream>
 #include <fstream>
@@ -9,45 +10,47 @@ using namespace std;
 
 void dataProcessor(string input_file, string output_file)
 {
-	string line_to_read;
-
-	ifstream datainput;
 	ofstream dataoutput;
-	datainput.open(input_file.c_str());
 	dataoutput.open(output_file);
 
-	getline(datainput, line_to_read);
-	dataoutput << line_to_read << endl;
+	vector<string> data = readFile(input_file);
+	string line_to_read;
 
-	getline(datainput, line_to_read);
-	dataoutput << line_to_read << endl;
+	dataoutput << data[0] << endl;
+	dataoutput << data[1] << endl;
 
-	getline(datainput, line_to_read);
-	dataoutput << line_to_read << endl;
+	//image format
+	dataoutput << data[2] << endl;
 
-	int count = 0;
-	int linebreaker = 12;
-	while (datainput.good() == true)
+	//data rows
+	int place_count = 0;
+	for (int row_count = 3; row_count < data.size(); row_count++)
 	{
-		getline(datainput, line_to_read, ' ');
+		istringstream next_row{ data[row_count] };
+		while (next_row.good() == true)
+		{
+			if (place_count == 0 || place_count % 3 == 0)
+			{
+				if ((place_count + 1) % 12 == 0)
+				{
+					dataoutput << endl;
+				}
+				getline(next_row, line_to_read, ' ');
+				dataoutput << 0 << " ";
+				place_count++;
+			}
+			else
+			{
+				if (place_count % 12 == 0)
+				{
+					dataoutput << endl;
+				}
+				getline(next_row, line_to_read, ' ');
+				dataoutput << line_to_read << " ";
+				place_count++;
+			}
+		}
 		
-		if (line_to_read == " ")
-		{
-			dataoutput << "";
-		}
-		else if (count == 0 || count % 3 == 0)
-		{
-			dataoutput << 0 << " ";
-			count++;
-		}
-		else
-		{
-			dataoutput << line_to_read << " ";
-			count++;
-		}
-
 	}
-
-	datainput.close();
-	dataoutput.close();
 }
+

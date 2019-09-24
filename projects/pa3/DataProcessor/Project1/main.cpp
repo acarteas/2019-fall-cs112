@@ -1,4 +1,5 @@
 #include "dataProcessor.h"
+#include "fileHelpers.h"
 #include <iostream>
 #include <fstream>
 #include <string>

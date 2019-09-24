@@ -18,12 +18,18 @@
     <ClInclude Include="dataProcessor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="fileHelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dataProcessor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fileHelpers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,6 +41,9 @@
       <Filter>Resource Files</Filter>
     </Text>
     <Text Include="bunny.ppm">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Text.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>
