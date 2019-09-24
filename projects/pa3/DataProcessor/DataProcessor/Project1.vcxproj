@@ -135,7 +135,6 @@
   <ItemGroup>
     <Text Include="blocks.ppm" />
     <Text Include="bunny.ppm" />
-    <Text Include="Text.txt" />
     <Text Include="tinypix.ppm" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
