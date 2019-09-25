@@ -1,48 +1,77 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
+#include <cmath>
+#include <cstdlib>
+
   
 using namespace std;
 
 
 int main(void)
 {
-	/*
+
 	ifstream  myFile;
 
-	myFile.open("tinypix.ppm");
+
+	string x;
+	cout << "Enter source File:" << endl;
+	cin >> x;
+	cout << "Enter source File: " << x << endl;
+
+	myFile.open(x);
 
 	if (!myFile)
 	{
 		cout << "Not open" << endl;
 		return 0;
 	}
-	 
-	while (myFile.good() == true)
-	{
-		string line;
-		getline(myFile, line);
-		cout << line << endl;
-	}
+	
+		vector<string> data;
+		while (myFile.good() == true)
+		{
+			string line;
+			getline(myFile, line);
+			data.push_back(line);
+		}
+		for (int i = 3; i < data.size(); i++)
+		{
+			cout << "Orginal File Contents"<< data[i] << endl;
 
-	myFile.close();*/
-	//string x;
-	//cout << "Enter source File:" << endl;
-	//cin >> x;
-	//cout << "Enter source File " << x << endl;
+			for (int j = 0; j < 3; j++)
+			{
+				string New_data = data[i];
+				cout << (New_data % 3) << endl;
+
+			}
+		}
+		
+	
+
+
+
+	myFile.close();
+}
+
+
+	
+	
+
+
 
 	//string y;
 	//cout << "Enter destination file:" << endl;
 	//cin >> y;
 	//cout << "Enter source File " << x << endl;
 
-	//cout << "Progam Complete." << endl;
+	//cout << "Program Complete." << endl;
 
 	/*
-	myFile -> int (I want to make a copy of the orginal file )
+	myFile -> string  (I want to make a copy of the orginal file )
 	
 
-	Ask the the user to type in the file of their choice -> "tinypix.ppm"
+	(DONE)Ask the the user to type in the file of their choice -> "tinypix.ppm"
 	print out Enter the source file and the persons input 
 			if the user inputs a file that is not in the directory 
 			print out a message saying file not included please try again.
@@ -50,12 +79,16 @@ int main(void)
 			print out file was found
 
 
-	Ask the user where they would like to put the input into a file -> "output.ppm" 
+	(DONE)Ask the user where they would like to put the input into a file -> "output.ppm" 
 			if the user inputs a file that is not in the directory 
 			print out a message saying file not included please try again.
 			else 
 			print out file was found 
 
 	I want to sort through the file's content 
+		
+
+	
+
 	*/
-}
+
