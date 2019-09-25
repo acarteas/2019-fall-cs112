@@ -42,7 +42,7 @@ int main(void)
 			for (int j = 0; j < 3; j++)
 			{
 				string New_data = data[i];
-				cout << (New_data % 3) << endl;
+				//cout << (New_data % 3) << endl; Will not accept the mod function 
 
 			}
 		}
