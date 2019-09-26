@@ -11,30 +11,49 @@ bool isPrime(int test_int)
 {
 	bool is_int_prime = false;
 
-	for (int i = 2; i < test_int; i++)
+	if (test_int < 0)
 	{
-		if (test_int % i == 0)
-		{
-			is_int_prime = false;
-			break;
-		}
-		else
-		{
-			is_int_prime = true;
-		}
+		throw invalid_argument{ "Error! Bad input. Negative input." };
 	}
-
-	if (is_int_prime == true)
+	else if (test_int == 0)
 	{
-		return true;
+		throw invalid_argument{ "Error! Bad input. 0 is neither prime nor composite." };
 	}
-	else if (is_int_prime == false)
+	else if (test_int == 1)
 	{
-		return false;
+		throw invalid_argument{ "Error! Bad input. 1 is neither prime nor composite." };
+	}
+	else if (test_int == 2)
+	{
+		is_int_prime = true;
 	}
 	else
 	{
-		throw invalid_argument{ "Error! Bad input. Neither prime nor not prime." };
+		for (int i = 2; i < test_int; i++)
+		{
+			if (test_int % i == 0)
+			{
+				is_int_prime = false;
+				break;
+			}
+			else
+			{
+				is_int_prime = true;
+			}
+		}
+
+		if (is_int_prime == true)
+		{
+			return true;
+		}
+		else if (is_int_prime == false)
+		{
+			return false;
+		}
+		else
+		{
+			throw invalid_argument{ "Error! Bad input. Neither prime nor not prime." };
+		}
 	}
 }
 
