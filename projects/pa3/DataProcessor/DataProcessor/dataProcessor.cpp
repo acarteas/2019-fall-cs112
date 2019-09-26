@@ -10,8 +10,7 @@ using namespace std;
 
 void dataProcessor(string input_file, string output_file)
 {
-	ofstream dataoutput;
-	dataoutput.open(output_file);
+	ofstream dataoutput{output_file};
 
 	vector<string> data = readFile(input_file);
 	string data_to_read;
@@ -53,7 +52,9 @@ void dataProcessor(string input_file, string output_file)
 			}
 		}
 		dataoutput << endl;
-	}	
+	}
+
+	dataoutput.close();	
 }
 
 
