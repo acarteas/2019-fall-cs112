@@ -47,7 +47,7 @@ int main(void)
 
 	cout << "Enter source file: ";
 	cin >> fileName;
-	cout << "Enter destination file : ";
+	cout << "Enter destination file: ";
 	cin >> outputName;
 
 	imgFile.open(fileName);
@@ -73,11 +73,15 @@ int main(void)
 
 		for (int k = 0; k < editLine.length(); k++)
 		{
-			if (editLine[k] != ' ' && editLine[k + 1] == ' ')
+			if (editLine[k] != ' ' && editLine[k + 1] != ' ' && ticker % 3 == 0)
+			{
+				editLine[k] = ' ';
+			}
+			else if (editLine[k] != ' ' && editLine[k + 1] == ' ')
 			{
 				if (ticker % 3 == 0)
 				{
-					editLine[k] = 'a';
+					editLine[k] = '0';
 				}
 				ticker++;
 			}
