@@ -4,6 +4,7 @@
 #include <vector>
 #include <cmath>
 #include <cstdlib>
+#include <sstream>
 
   
 using namespace std;
@@ -37,17 +38,20 @@ int main(void)
 		}
 		for (int i = 3; i < data.size(); i++)
 		{
-			cout << "Orginal File Contents"<< data[i] << endl;
+			
 
 			for (int j = 0; j < 3; j++)
 			{
-				string New_data = data[i];
-				//cout << (New_data % 3) << endl; Will not accept the mod function 
+				//change the string into a int
+				int New_data = stoi(data[i]);
 
+
+				cout << (New_data % 3 == 1) << endl;
+				// then mod it.
 			}
+			//cout << data[i] << endl;
+			
 		}
-		
-	
 
 
 
