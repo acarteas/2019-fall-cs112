@@ -55,6 +55,7 @@ bool isPrime(int test_int)
 			throw invalid_argument{ "Error! Bad input. Neither prime nor not prime." };
 		}
 	}
+	return is_int_prime;
 }
 
 void findPrimeInRange(int min_input, int max_input)
