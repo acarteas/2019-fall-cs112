@@ -36,9 +36,14 @@ int main(void)
 	vector<string> data;
 	ifstream imgFile;
 	ofstream imgEdit;
-	istringstream dummy;
-	string currentLine;
-	string currentNum;
+	istringstream iss;
+	//string dummy;
+	//string dummy2;
+	//string toZero;
+	//string editLine;
+	//istringstream dummy;
+	//string currentLine;
+	//string currentNum;
 
 	cout << "Enter source file: ";
 	cin >> fileName;
@@ -59,24 +64,27 @@ int main(void)
 	}
 
 	imgFile.close();
-	/*
+
 	for (int j = 0; j < data.size(); j++)
 	{
-		dummy.str(data[j]);
-		while (dummy.good())
+		int ticker = 3;
+
+		string editLine = data[j];
+
+		for (int k = 0; k < editLine.length(); k++)
 		{
-			getline(dummy, currentNum, ' ');
-			if (currentNum != "0")
+			if (editLine[k] != ' ' && editLine[k + 1] == ' ')
 			{
-				currentNum = "0";
+				if (ticker % 3 == 0)
+				{
+					editLine[k] = 'a';
+				}
+				ticker++;
 			}
-			currentLine += currentNum;
-			getline(dummy, currentNum, ' ');
-			getline(dummy, currentNum, ' ');
 		}
-		data[j] = currentLine;
+		data[j] = editLine;
 	}
-	*/
+
 	imgEdit.open(outputName);
 	imgEdit << format << "\n";
 	imgEdit << width << " ";
