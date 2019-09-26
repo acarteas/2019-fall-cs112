@@ -19,7 +19,7 @@ int main(void)
 	string x;
 	cout << "Enter source File:" << endl;
 	cin >> x;
-	cout << "Enter source File: " << x << endl;
+	cout << "Your selected source File:  " << x << endl;
 
 	myFile.open(x);
 
@@ -34,25 +34,41 @@ int main(void)
 		{
 			string line;
 			getline(myFile, line);
+			//cout << line << endl;
 			data.push_back(line);
+
 		}
-		for (int i = 3; i < data.size(); i++)
+		//change the string into a int
+		cout << "The orginial Line: " << << endl;
+		int i;
+		int New_data;
+
+		
+		for (int i = 3; i < data.size()-1; i++)
 		{
 			
-
-			for (int j = 0; j < 3; j++)
+			for (int j = 0; j < 2; j++)
 			{
-				//change the string into a int
-				int New_data = stoi(data[i]);
+				 New_data = stoi(data[3]);
+				
+				int old_value = New_data;
+				int New_value = old_value - old_value;
+				old_value = New_value;
 
-
-				cout << (New_data % 3 == 1) << endl;
-				// then mod it.
+				
+				//cout << New_value;
+				//cout<< New_data << endl;
+			
+		
 			}
-			//cout << data[i] << endl;
+			
 			
 		}
+		cout << "The orginial Line: " << data[3] << endl;
+		cout << New_data << endl;
+		
 
+		
 
 
 	myFile.close();
