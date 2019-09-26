@@ -66,12 +66,20 @@ vector<string> getFile(void)
 
 int zeroEveryThird(vector<string> data)
 {
+
 	data.erase(data.begin(), data.begin()+3);
 	for (int i = 0; i < data.size(); i++)
 	{
-		if (i % 3 == 0)
+		for (int j = 0; j < data[i].size(); j++)
 		{
-			cout << data[i];
+			if (data[i][j] != ' ')
+			{
+				data.;
+			}
+			else
+			{
+				cout << data[i][j];
+			}
 		}
     }
 	return 0;
