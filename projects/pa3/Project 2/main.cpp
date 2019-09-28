@@ -38,22 +38,31 @@ int main(void)
 			data.push_back(line);
 
 		}
+		vector<int> output_data;
+		
 		//change the string into a int
-		cout << "The orginial Line: " << << endl;
+		//cout << "The orginial Line: " << endl;
 		int i;
 		int New_data;
 
 		
 		for (int i = 3; i < data.size()-1; i++)
 		{
-			
-			for (int j = 0; j < 2; j++)
+			for(int j = 0; j < data[i].size(); j += 3)
 			{
-				 New_data = stoi(data[3]);
+				New_data = stoi(data[i]);
+				data[i][j] = 0;
 				
-				int old_value = New_data;
-				int New_value = old_value - old_value;
-				old_value = New_value;
+				//int old_value = New_data;
+				//int New_value = old_value - old_value;
+				//old_value = New_value;
+				cout << "The orginial Line: " << data[i] << endl;
+				cout << " 10 J value: " << data[i][j] << endl;
+
+			}
+			
+				
+				
 
 				
 				//cout << New_value;
@@ -61,18 +70,23 @@ int main(void)
 			
 		
 			}
+
 			
 			
-		}
-		cout << "The orginial Line: " << data[3] << endl;
-		cout << New_data << endl;
 		
-
+		//cout << "The orginial Line: " << data[3] << endl;
+		//cout << New_data << endl;
 		
-
-
 	myFile.close();
 }
+
+
+
+
+
+
+
+	
 
 
 	
