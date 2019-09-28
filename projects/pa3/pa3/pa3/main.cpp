@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -18,14 +19,16 @@ const int NUM_HEADER_LINES = 3;
 int main(void)
 {
 	ifstream input_stream;
+
 	ofstream output_stream;
 	string	 line_to_read;
 	vector<string> header_info;
 	vector<int> pixel_data;
+	vector<int> converted_data;
 
 	what_file(input_stream, output_stream);
 
-	//Reading the File
+	//Reading the first 3 lines of the File
 	if (input_stream.good() == true)
 	{
 		for (int i = 0; i < NUM_HEADER_LINES; i++)
@@ -34,6 +37,8 @@ int main(void)
 			header_info.push_back(line_to_read);
 		}
 	}
+
+
 
 	//Reading the body of the file
 	while (input_stream.good() == true)
@@ -45,10 +50,21 @@ int main(void)
 		}
 	}
 
-	//Negate Red - turn every 3rd number
+	//Converting String to Integers for Reading
+	/*for (int i = 0; i < pixel_data.size(); i++)
+	{
+		istringstream data_row{
+			string temp_line;
+
+		}
+	}
+	*/
+		
+
+	//Remove Red - turn every 3rd number
 	//(starting with element 0) in the data component 
 	//to a zero. (Data Changed)
-	for (int i = 0; i < pixel_data.size(); i += 3)
+	for (int i = 3; i < pixel_data.size(); i +=3)
 	{
 		pixel_data[i] = 0;
 	}
@@ -62,21 +78,16 @@ int main(void)
 	//Write out to file (body).
 	for (int i = 0; i < pixel_data.size(); i++)
 	{
-		if (i % 3 == 2) 
+		//if (i % 3 == 2) 
 		{
-			output_stream << pixel_data[i] << '\t';
+			output_stream << pixel_data[i]<< ' ';
 		}
-		else
-		{
-			output_stream << pixel_data[i] << ' ';
-		}
-		
+
 	}
 
 	while (input_stream.good())
 	{
 		getline(input_stream, line_to_read);
-		
 	}
 	//cleaning up:
 	input_stream.close();
@@ -111,6 +122,7 @@ void what_file(ifstream& input_stream, ofstream& output_stream)
 	cout << "Enter the name of the file you wish to write to: " << endl;
 	getline(cin, file_name);
 	output_stream.open(file_name);
+	// Error checking to make sure file ext can open.
 	while (output_stream.good() == false)
 	{
 		cout << "This file name is not compatible! Please re-enter file name: " << endl;
