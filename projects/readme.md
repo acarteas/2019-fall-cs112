@@ -1,1 +1,1 @@
-Put your projects in this directory.
+Tashenea Burns-Young
