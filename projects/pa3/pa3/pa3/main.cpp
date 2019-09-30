@@ -40,18 +40,22 @@ vector<string> getFile(void)
 	if (file.is_open() == true) // if the file is open..
 	{
 		string myline;
-		// push contents of file to a vector
-		while (file.good() == true)
+		
+
+		while (file >> myline)
 		{
-			getline(file, myline);
 			ender.push_back(myline);
+			cout << myline << endl;
 		}
+		
+
+		
 		// grab width and height
-		istringstream row2{ ender[1] };
-		string temp;
+		//istringstream row2{ ender[1] };
+		//string temp;
 
 		// output all header elements before modification
-		cout << "Image Format: " << ender[0] << endl;
+		/*cout << "Image Format: " << ender[0] << endl;
 		getline(row2, temp, ' ');
 		int width = stoi(temp);
 		getline(row2, temp, ' ');
@@ -59,6 +63,7 @@ vector<string> getFile(void)
 		cout << "Width: " << width << endl
 			<< "Height: " << height << endl
 			<< "Max Color Value: " << ender[2] << endl;
+			*/
 	}
 	file.close(); // close the file now that its contents are stored to a vector
 	return ender;
@@ -66,21 +71,16 @@ vector<string> getFile(void)
 
 int zeroEveryThird(vector<string> data)
 {
-
 	data.erase(data.begin(), data.begin()+3);
-	for (int i = 0; i < data.size(); i++)
+	int test;
+	test = data.size();
+	cout << test << endl;
+	string data_strings;
+	for (int i = 4; i < data.size(); i+=3)
 	{
-		for (int j = 0; j < data[i].size(); j++)
-		{
-			if (data[i][j] != ' ')
-			{
-				data.;
-			}
-			else
-			{
-				cout << data[i][j];
-			}
-		}
+		istringstream row{ data[i] };
+		getline(row, data_strings, ' ');
+		cout << data_strings << endl;
     }
 	return 0;
 }
@@ -89,6 +89,6 @@ int zeroEveryThird(vector<string> data)
 
 int main()
 {
-	zeroEveryThird(getFile());
-	
+	//zeroEveryThird(getFile());
+	getFile();
 }
