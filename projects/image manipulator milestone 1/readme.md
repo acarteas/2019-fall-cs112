@@ -53,6 +53,7 @@ Enter destination file: output.ppm
 4. Negate Red
 5. Negate Blue
 6. Negate Green
+7. Grayscale
 
 Selection: 5
 
