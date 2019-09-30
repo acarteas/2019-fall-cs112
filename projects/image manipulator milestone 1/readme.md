@@ -68,7 +68,7 @@ To submit your assignment, check your code into your new CS112-ImageManipulation
 
 # Grading
 This assignment is worth 100 points:
-* 60 points for completing the task (demonstrate good progress, regular github checkins, good github comments, maintaining your project board)
+* 60 points for reglarly working on the project (demonstrate good progress, regular github checkins, good github comments, maintaining your project board)
 * 20 points for correct program output (i.e. all of your image effects work properly)
 * 10 points for demonstrating progress during checkins 
 * 10 points for your reflection.  For inspiration, see [my prompts](../../docs/sample_reflection.md) 
