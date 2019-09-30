@@ -44,7 +44,7 @@ int main(void)
 	while (input_stream.good() == true)
 	{
 		getline(input_stream, line_to_read, ' ');
-		if (line_to_read != "")
+		if (line_to_read != "" && line_to_read != "\n")
 		{
 			pixel_data.push_back(stoi(line_to_read));
 		}
@@ -53,7 +53,7 @@ int main(void)
 	//Remove Red - turn every 3rd number
 	//(starting with element 0) in the data component 
 	//to a zero. (Data Changed)
-	for (int i = 3; i < pixel_data.size(); i +=3)
+	for (int i = 0; i < pixel_data.size(); i +=3)
 	{
 		pixel_data[i] = 0;
 	}
