@@ -43,11 +43,9 @@ int main(void)
 	//Reading the body of the file
 	while (input_stream.good() == true)
 	{
-		getline(input_stream, line_to_read, ' ');
-		if (line_to_read != "" && line_to_read != "\n")
-		{
-			pixel_data.push_back(stoi(line_to_read));
-		}
+		int value = 0;
+		input_stream >> value;
+		pixel_data.push_back(value);
 	}
 
 	//Remove Red - turn every 3rd number
