@@ -51,9 +51,12 @@ vector<string> readFile(const string& file_name)
 int main()
 {
 	string fileName;
+	string newOutputFileName;
 
 	cout << "Enter a name of a .ppm file.(include extension)" << endl;
 	cin >> fileName;
+	cout << "Enter a name of a output .pp file" << endl;
+	cin >> newOutputFileName;
 
 	ifstream fout;
 	fout.open(fileName);
@@ -110,15 +113,11 @@ int main()
 	//location of where the file will go. 
 	void ofstreamTemplate();
 	{
-		string outPutFile;
-		cout << "What is the name of your output file?" << endl;
-		cin >> outPutFile;
-		ofstream output_file{ outPutFile };
+		
+		ofstream output_file{ newOutputFileName };
 
-		string newFile = outPutFile;
 
-		output_file.open(outPutFile);
-
+		output_file.open(newOutputFileName);
 
 		output_file << line1 << endl
 			<< line2 << endl
