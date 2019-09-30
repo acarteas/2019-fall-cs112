@@ -21,6 +21,9 @@
     <None Include="blocks.ppm">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="modified.ppm">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

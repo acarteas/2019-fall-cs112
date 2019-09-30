@@ -125,6 +125,7 @@
   <ItemGroup>
     <None Include="..\..\..\pa2\tinypix.ppm" />
     <None Include="blocks.ppm" />
+    <None Include="modified.ppm" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
