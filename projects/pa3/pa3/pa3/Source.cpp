@@ -5,10 +5,16 @@
 #include <string>
 #include <cmath>
 #include <ctime>
-#include <exception> //exposes Exception objects
-#include <vector> //CH4 -- replaces basic C-style arrays
-#include <iomanip> //for making fancy couts and output to file
+#include <exception>
+#include <vector> 
+#include <iomanip> 
 using namespace std;
+
+string line1;
+string line2;
+string line3;
+string line4;
+
 
 //function to go through a file and change every 3rd thing into a 0
 
@@ -44,7 +50,7 @@ vector<string> readFile(const string& file_name)
 
 int main()
 {
-	string fileName; 
+	string fileName;
 
 	cout << "Enter a name of a .ppm file.(include extension)" << endl;
 	cin >> fileName;
@@ -64,20 +70,43 @@ int main()
 		getline(fout, line3);
 
 		cout << line1 << endl
-			 << line2 << endl
-			 << line3 << endl;
+			<< line2 << endl
+			<< line3 << endl;
 	}
 	else
 	{
 		cout << "Could not open file" << endl;
 		return 1;
 	}
-		
-	system("pause");
 
+	vector<string> fileBeingChanged = readFile(fileName);
+	vector<int> stringBeingChanged;
+
+	
+	//creating a function to change string to integers
+	int count = 0;
+
+	for (int i = 3; i < fileBeingChanged.size(); i++)
+	{
+		istringstream line{ fileBeingChanged[i] };
+		while (line.good() == true)
+		{
+			string value;
+
+			getline(line, value, ' ');
+			if (value.length() > 0 && value != "/n")
+			{
+				stringBeingChanged.push_back(stoi(value));
+			}
+		}
+	}
+		
+
+	//changing red to 0 
+	
 
 	fout.close();
-	
+
 	//location of where the file will go. 
 	void ofstreamTemplate();
 	{
@@ -88,11 +117,13 @@ int main()
 
 		string newFile = outPutFile;
 
+		output_file.open(outPutFile);
 
-		output_file << fileName << outPutFile  << endl;
 
-		cout << outPutFile;
-		
+		output_file << line1 << endl
+			<< line2 << endl
+			<< line3 << endl;
+
 
 		output_file.close();
 
