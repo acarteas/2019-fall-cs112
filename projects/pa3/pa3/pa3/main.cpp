@@ -50,17 +50,6 @@ int main(void)
 		}
 	}
 
-	//Converting String to Integers for Reading
-	/*for (int i = 0; i < pixel_data.size(); i++)
-	{
-		istringstream data_row{
-			string temp_line;
-
-		}
-	}
-	*/
-		
-
 	//Remove Red - turn every 3rd number
 	//(starting with element 0) in the data component 
 	//to a zero. (Data Changed)
