@@ -19,7 +19,6 @@ const int NUM_HEADER_LINES = 3;
 int main(void)
 {
 	ifstream input_stream;
-
 	ofstream output_stream;
 	string	 line_to_read;
 	vector<string> header_info;
@@ -37,8 +36,6 @@ int main(void)
 			header_info.push_back(line_to_read);
 		}
 	}
-
-
 
 	//Reading the body of the file
 	while (input_stream.good() == true)
@@ -65,11 +62,9 @@ int main(void)
 	//Write out to file (body).
 	for (int i = 0; i < pixel_data.size(); i++)
 	{
-		//if (i % 3 == 2) 
 		{
-			output_stream << pixel_data[i]<< ' ';
+			output_stream << pixel_data[i] << ' ';
 		}
-
 	}
 
 	while (input_stream.good())
