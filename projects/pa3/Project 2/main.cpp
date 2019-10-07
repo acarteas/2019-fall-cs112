@@ -48,18 +48,45 @@ int main(void)
 		
 		for (int i = 3; i < data.size()-1; i++)
 		{
-			for(int j = 0; j < data[i].size(); j += 3)
+			istringstream line{data[i]};
+			int counter = 1;
+
+			while (line.good() == true)
+			{
+				int number = 0;
+				line >> number;
+				//cout << number << endl;
+				if (counter % 3 == 0)
+				{
+					output_data.push_back(0);
+					
+				}
+				else
+				{
+					output_data.push_back(number);
+				}
+				counter++;
+			}
+			for (int j = 0; j < output_data.size(); j++)
+			{
+				cout << output_data[j] << " " ;
+			}
+
+			/*
+			for(int j = 2; j < data[i].size(); j++)
 			{
 				New_data = stoi(data[i]);
-				data[i][j] = 0;
+				//data[i][j] = 0;
 				
 				//int old_value = New_data;
 				//int New_value = old_value - old_value;
 				//old_value = New_value;
 				cout << "The orginial Line: " << data[i] << endl;
-				cout << " 10 J value: " << data[i][j] << endl;
+				cout << "j locater is at:  " << data[i][j]<< endl;
+				//cout << " 10 J value: " << data[i][j] << endl;
 
 			}
+			*/
 			
 				
 				
@@ -70,8 +97,7 @@ int main(void)
 			
 		
 			}
-
-			
+		
 			
 		
 		//cout << "The orginial Line: " << data[3] << endl;
