@@ -8,7 +8,7 @@
 
   
 using namespace std;
-
+void removeRed(vector<int>& data);
 
 int main(void)
 {
@@ -28,7 +28,7 @@ int main(void)
 		cout << "Not open" << endl;
 		return 0;
 	}
-	
+	removeRed();
 		vector<string> data;
 		while (myFile.good() == true)
 		{
@@ -40,14 +40,12 @@ int main(void)
 		}
 		vector<int> output_data;
 		
-		//change the string into a int
-		//cout << "The orginial Line: " << endl;
-		int i;
-		int New_data;
-
+		
+		
 		
 		for (int i = 3; i < data.size()-1; i++)
 		{
+			//change the string into a int
 			istringstream line{data[i]};
 			int counter = 1;
 
@@ -67,10 +65,7 @@ int main(void)
 				}
 				counter++;
 			}
-			for (int j = 0; j < output_data.size(); j++)
-			{
-				cout << output_data[j] << " " ;
-			}
+			
 
 			/*
 			for(int j = 2; j < data[i].size(); j++)
@@ -102,7 +97,10 @@ int main(void)
 		
 		//cout << "The orginial Line: " << data[3] << endl;
 		//cout << New_data << endl;
-		
+		/*for (int j = 0; j < output_data.size(); j++)
+		{
+			cout << output_data[j] << " ";
+		}*/
 	myFile.close();
 }
 
@@ -152,3 +150,10 @@ int main(void)
 
 	*/
 
+void removeRed(vector<int>& data)
+{
+	for (int i = 0; i < data.size(); i += 3)
+	{
+		data[i] == 0;
+	}
+}
