@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\tinypix.ppm">
+    <None Include="output.ppm">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="output.ppm">
+    <None Include="tinypix.ppm">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
@@ -26,5 +26,28 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="bunny_grayscale.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bunny_negate_blue.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bunny_negate_green.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bunny_negate_red.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bunny_remove_blue.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bunny_remove_green.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bunny_remove_red.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

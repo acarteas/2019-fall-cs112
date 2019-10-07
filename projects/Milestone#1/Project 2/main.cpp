@@ -56,7 +56,7 @@ int main(void)
 				int number = 0;
 				line >> number;
 				//cout << number << endl;
-				if (counter % 3 == 0)
+				if (counter % 5 == 0)
 				{
 					output_data.push_back(0);
 					

@@ -19,11 +19,20 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\tinypix.ppm" />
     <None Include="output.ppm" />
+    <None Include="tinypix.ppm" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="bunny_grayscale.png" />
+    <Image Include="bunny_negate_blue.png" />
+    <Image Include="bunny_negate_green.png" />
+    <Image Include="bunny_negate_red.png" />
+    <Image Include="bunny_remove_blue.png" />
+    <Image Include="bunny_remove_green.png" />
+    <Image Include="bunny_remove_red.png" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
