@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <None Include="bunny.ppm" />
     <None Include="output.ppm" />
     <None Include="tinypix.ppm" />
   </ItemGroup>
