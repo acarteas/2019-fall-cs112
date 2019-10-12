@@ -13,10 +13,8 @@ using namespace std;
 string line1;
 string line2;
 string line3;
-string line4;
 
 
-//function to go through a file and change every 3rd thing into a 0
 
 vector<string> readFile(ifstream& fileName)
 {
@@ -48,6 +46,8 @@ vector<string> readFile(const string& file_name)
 }
 
 
+
+
 int main()
 {
 	string fileName;
@@ -55,22 +55,20 @@ int main()
 
 	cout << "Enter a name of a .ppm file.(include extension)" << endl;
 	cin >> fileName;
-	cout << "Enter a name of a output .pp file" << endl;
+	cout << "Enter a name of a output .ppm file" << endl;
 	cin >> newOutputFileName;
 
-	ifstream fout;
-	fout.open(fileName);
+	ifstream fin;
+	fin.open(fileName);
 
-
-	if (fout.good())
-	{
-
+	if (fin.good() == true)
+	{		
 		string line1;
-		getline(fout, line1);
+		getline(fin, line1);
 		string line2;
-		getline(fout, line2);
+		getline(fin, line2);
 		string line3;
-		getline(fout, line3);
+		getline(fin, line3);
 
 		cout << line1 << endl
 			<< line2 << endl
@@ -81,6 +79,8 @@ int main()
 		cout << "Could not open file" << endl;
 		return 1;
 	}
+
+
 
 	vector<string> fileBeingChanged = readFile(fileName);
 	vector<int> stringBeingChanged;
@@ -105,27 +105,31 @@ int main()
 	}
 		
 
-	//changing red to 0 
 	
-
-	fout.close();
+	fin.close();
 
 	//location of where the file will go. 
-	void ofstreamTemplate();
-	{
+
 		
-		ofstream output_file{ newOutputFileName };
+	ofstream output_file{ newOutputFileName };
 
+	output_file
+		<< line1 << endl
+		<< line2 << endl
+		<< line3 << endl;
 
-		output_file.open(newOutputFileName);
+	
 
-		output_file << line1 << endl
-			<< line2 << endl
-			<< line3 << endl;
-
-
-		output_file.close();
-
+	for (int i = 0; i < stringBeingChanged.size(); i++)
+	{
+		output_file << stringBeingChanged[i] << ' ';
 	}
+				
+	
+	output_file.close();
+
+	return EXIT_SUCCESS;
+
+	
 
 }
