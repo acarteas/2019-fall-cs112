@@ -6,8 +6,6 @@ Use the following guide to help you study for the midterm next lab:
 
 ## Tips
 * If you get stuck on one problem, skip it and move on to the next
-* If you're uncomfortable with writing functions, write everything in main -- you'll lose some points but you'll get more for finishing the tasks.
-
 
 ### Question #1: Fizzbuzz
 Complete a function called fizzbuzz that does the following ([example here](https://www.hackerrank.com/challenges/fizzbuzz/problem)):
