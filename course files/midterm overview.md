@@ -9,7 +9,7 @@ Use the following guide to help you study for the midterm next lab:
 
 ### Question #1: Fizzbuzz
 Complete a function called fizzbuzz that does the following ([example here](https://www.hackerrank.com/challenges/fizzbuzz/problem)):
-1. Output 50 lines to the screen with cout *using a FOR loop* (e.g. for(int i = 1; i < 50; i++)
+1. Output 50 lines to the screen with cout **using a FOR loop** (e.g. for(int i = 1; i < 50; i++)
 2. If the line number is a multiple of 3, print "Fizz"
 3. If the line number is a multiple of 5, print "Buzz"
 4. If the line number is a mulitple of both 3 and 5, print "FizzBuzz"
