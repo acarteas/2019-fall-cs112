@@ -23,9 +23,12 @@ private:
 	Fl_Box* result_box = nullptr;
 	Fl_Button* b1 = nullptr;
 
-	//TODO: figure out how to call private member functions 
-	//as callbacks
-	void sayHello(Fl_Widget*, void*) {
+	//as per https://www.fltk.org/articles.php?L379+I0+TFAQ+P1+Q
+	static void sayHello(Fl_Widget* w, void* data) {
+		((BasicWindow*)data)->sayHello(w);
+	}
+
+	void sayHello(Fl_Widget*) {
 		string text = name_input->value();
 		text = "Hello, " + text;
 		char* cstr = new char[text.length() + 1];
@@ -39,9 +42,7 @@ public:
 		window = new Fl_Window{ 500, 500, "Window title" };
 		name_input = new Fl_Input{ 200, 0, 200, 30, "Name:" };;
 		b1 = new Fl_Button{ 20, 20, 80, 25, "&Beep" };
-
-		//TODO: figure out how to call 
-		//b1->callback(sayHello, 0);
+		b1->callback(sayHello, this);
 		result_box = new Fl_Box{ 200, 200, 200, 200, "test" };
 		window->show();
 	}
