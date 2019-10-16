@@ -458,6 +458,9 @@
     <ClInclude Include="FL\x.H">
       <Filter>Header Files\FL</Filter>
     </ClInclude>
+    <ClInclude Include="BouncingBall.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="FL\Makefile.in">
@@ -466,5 +469,10 @@
     <None Include="FL\README.Xcode">
       <Filter>Header Files\FL</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="FL\fltk.lib">
+      <Filter>Resource Files</Filter>
+    </Library>
   </ItemGroup>
 </Project>

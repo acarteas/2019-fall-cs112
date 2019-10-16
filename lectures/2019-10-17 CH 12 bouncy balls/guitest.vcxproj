@@ -90,9 +90,11 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>Comctl32.lib;fltk.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -129,6 +131,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BouncingBall.hpp" />
     <ClInclude Include="FL\abi-version.h" />
     <ClInclude Include="FL\dirent.h" />
     <ClInclude Include="FL\Enumerations.H" />
@@ -278,6 +281,9 @@
   <ItemGroup>
     <None Include="FL\Makefile.in" />
     <None Include="FL\README.Xcode" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="FL\fltk.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -30,7 +30,7 @@ typedef HRGN Fl_Region;
 typedef HWND Window;
 typedef POINT XPoint;
 
-#include <FL/Fl_Window.H>
+#include "FL/Fl_Window.H"
 
 // this part is included only when compiling the FLTK library or if requested explicitly
 #if defined(FL_LIBRARY) || defined(FL_INTERNALS) 
