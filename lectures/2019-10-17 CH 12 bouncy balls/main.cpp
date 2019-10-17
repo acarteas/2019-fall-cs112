@@ -7,6 +7,8 @@
 #include "FL/fl_ask.H"
 #include "FL/Fl_Widget.H"
 #include <string>
+#include <exception>
+#include <iostream>
 #include "BouncingBall.hpp"
 #ifdef _MSC_VER
 #pragma warning(push)
