@@ -8,6 +8,7 @@
 using namespace std;
 
 // Problem 1:
+
 void fizzBuzz()
 {
     for (int i = 1; i <= 50; i++)
@@ -33,6 +34,7 @@ void fizzBuzz()
 }
 
 // Problem 2:
+
 void readFile(string file_name) 
 {
     ifstream input;
@@ -47,6 +49,7 @@ void readFile(string file_name)
 }
 
 // Problem 3:
+
 void computeAverage(string input_file, string output_file)
 {
     ifstream stream;
