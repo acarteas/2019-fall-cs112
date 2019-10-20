@@ -74,9 +74,58 @@ void computeAverage(string input_file, string output_file)
 
 // Problem 4:
 
+// Problem 5:
+
+// Problem 6:
+
+// Problem 7:
+
+// Problem 8:
+
+int longestSentence(string text) 
+{
+    vector<string> temp{};
+    istringstream stream{ text };
+    while (stream.good() == true)
+    {
+        string word;
+        getline(stream, word, '.');
+        temp.push_back(word);
+    }
+    vector<string> sentence{};
+    vector<vector<string>> lines{};
+    for (int i = 0; i < temp.size(); i++)
+    {
+        istringstream sent_stream{ temp[i] };
+        while (sent_stream.good() == true)
+        {
+            string word;
+            getline(sent_stream, word, ' ');
+            if (word == "" || word == " ")
+            {
+                word = word;
+            }
+            else
+            {
+                sentence.push_back(word);
+            }
+        }
+        lines.push_back(sentence);
+        sentence.clear();
+    }
+    int largest = 0;
+    for (int i = 0; i < lines.size(); i++)
+    {
+        if (lines[i].size() > largest)
+        {
+            largest = lines[i].size();
+        }
+    }
+    return largest;
+}
+
 int main()
 {
-    fizzBuzz();
-    cout << endl << endl;
+    cout << longestSentence("This is a string. Where. The longest sentence. is four.") << endl;
 
 }
