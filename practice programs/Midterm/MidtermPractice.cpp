@@ -1,6 +1,8 @@
 #include <iostream>
+#include <iomanip>
 #include <fstream>
 #include <sstream>
+#include <exception>
 #include <string>
 #include <vector>
 using namespace std;
@@ -74,11 +76,41 @@ void computeAverage(string input_file, string output_file)
 
 // Problem 4:
 
+void displayNumbers(vector<double>& data)
+{
+	for (int i = 0; i < data.size(); i++)
+	{
+		cout << fixed << setprecision(2) << setw(9) << data[i] << " ";
+		if ((i + 1) % 3 == 0)
+		{
+			cout << endl;
+		}
+	}
+}
+
 // Problem 5:
+
+void dangerousCode()
+{
+    throw invalid_argument{ "invalid argument"};
+}
 
 // Problem 6:
 
 // Problem 7:
+
+int numberOfSentences(string text)
+{
+    istringstream stream{ text };
+    vector<string> sentence{};
+    while (stream.good() == true)
+    {
+        string line;
+        getline(stream, line, '.');
+        sentence.push_back(line);
+    }
+    return (sentence.size() - 1);
+}
 
 // Problem 8:
 
@@ -127,5 +159,18 @@ int longestSentence(string text)
 int main()
 {
     cout << longestSentence("This is a string. Where. The longest sentence. is four.") << endl;
-
+    cout << endl << endl;
+    cout << numberOfSentences("This is a string. Where. The longest sentence. is four.") << endl;
+    cout << endl << endl;
+    vector<double> data_values{ 123.4, 30.24, 9.1, 13.8, 18.96, 2000.2345, 80.6666 };
+    displayNumbers(data_values);
+    cout << endl << endl;
+    try
+    {
+        dangerousCode();
+    }
+    catch (...)
+    {
+        cout << "Invalid Argument" << endl;
+    }
 }
