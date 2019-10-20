@@ -80,7 +80,7 @@ void displayNumbers(vector<double>& data)
 {
 	for (int i = 0; i < data.size(); i++)
 	{
-		cout << fixed << setprecision(2) << setw(9) << data[i] << " ";
+		cout << fixed << setprecision(2) << setw(8) << data[i] << " ";
 		if ((i + 1) % 3 == 0)
 		{
 			cout << endl;
