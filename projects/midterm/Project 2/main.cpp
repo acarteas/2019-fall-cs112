@@ -5,14 +5,56 @@
 #include <cmath>
 #include <cstdlib>
 
+
   
 using namespace std;
 
 
-int main(void)
+
+void readFile(string file_name)
+{
+	ifstream myFile;
+	cout << "enter filename:  " << endl;
+	cin >> file_name;
+
+	myFile.open(file_name);
+
+	if (!myFile)
+	{
+		cout << "Not a file name!" << endl;
+	}
+
+	
+	vector<string> fileContents;
+
+	while (myFile.good() == true)
+	{
+
+		string line;
+		fileContents.push_back(line);
+	}
+
+	for (int i= 1; i < fileContents.size(); i++)
+	{
+
+		cout << "Contents " << fileContents[i] << endl;
+
+	}
+
+
+
+
+	myFile.close();
+
+
+
+
+
+}
+int main()
 {
 
-	ifstream  myFile;
+	/*ifstream  myFile;
 
 
 	string x;
@@ -26,9 +68,25 @@ int main(void)
 	{
 		cout << "Not open" << endl;
 		return 0;
-	}
-	
-		vector<string> data;
+	}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*vector<string> data;
 		while (myFile.good() == true)
 		{
 			string line;
@@ -42,20 +100,20 @@ int main(void)
 			for (int j = 0; j < 3; j++)
 			{
 				string New_data = data[i];
-				//cout << (New_data % 3) << endl; Will not accept the mod function 
+				//cout << (New_data % 3) << endl; Will not accept the mod function
 
 			}
 		}
-		
-	
-
-
-
-	myFile.close();
+		myFile.close();
 }
 
 
-	
+
+*/
+
+	return 0;
+
+}
 	
 
 
