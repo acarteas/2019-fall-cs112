@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{DE6EA849-6916-4600-8134-CBDDF9F85C08}</ProjectGuid>
-    <RootNamespace>pa2</RootNamespace>
+    <ProjectGuid>{EF406DF7-2F68-46BC-BDF5-F3DB6936827A}</ProjectGuid>
+    <RootNamespace>CplusPractice</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -123,10 +123,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClInclude Include="TestFunctions.h" />
+    <ClInclude Include="PrimeFinder.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="tinypix.ppm" />
+    <ClCompile Include="PrimeFinder.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="TestFunctions.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
