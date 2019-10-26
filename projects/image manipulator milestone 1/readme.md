@@ -15,7 +15,7 @@ Thus, you will need to set every 3rd value to 0 starting with the 2nd data item 
 
 ## 3. Remove all blue
 To remove all blue from an image, set all blue pixels equal to 0.  Recall that PPM data is in the repeating format RGB RGB RGB ...
-Thus, you will need to set every 3rd value to 0 starting with the 2nd data item (element 1 in array terms).  Here is our bunny image with the blue removed:
+Thus, you will need to set every 3rd value to 0 starting with the 3rd data item (element 2 in array terms).  Here is our bunny image with the blue removed:
 
 ![no green](bunny_remove_blue.png)  
 
@@ -53,6 +53,7 @@ Enter destination file: output.ppm
 4. Negate Red
 5. Negate Blue
 6. Negate Green
+7. Grayscale
 
 Selection: 5
 
