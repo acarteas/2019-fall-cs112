@@ -104,7 +104,7 @@ int main()
 		}
 	}
 
-	for (int i = 0; i < fileBeingChanged.size(); i += 3)
+	for (int i = 0; i < stringBeingChanged.size(); i += 3)
 	{
 		stringBeingChanged[i] = 0;
 	}
