@@ -461,6 +461,15 @@
     <ClInclude Include="BouncingBall.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Ball.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BallRenderer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="FL\Makefile.in">
