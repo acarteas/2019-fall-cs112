@@ -42,6 +42,7 @@ To pixelate an image, take a reference pixel P and a distance D and make all pix
 |1|1|3|3|
 |9|9|11|11|
 |9|9|11|11|
+
 Note that for the image above, I used a distance D of 5.  Try playing around with different distance values.
 ![Pixelate](bunny2_pixelate.png) 
 
@@ -55,6 +56,7 @@ This one is probably the most conceptually difficult.  Essentially, you will nee
 |3|3|3|3|
 
 A 90 degree rotation would result in:
+
 | | | |
 |-|-|-| 
 |3|2|1|
