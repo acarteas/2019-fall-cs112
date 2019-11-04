@@ -35,6 +35,9 @@
     <Image Include="bunny_remove_green.png" />
     <Image Include="bunny_remove_red.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Helper.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{58D1FDB1-2943-4B15-89E5-D7DFDBBC38AA}</ProjectGuid>
