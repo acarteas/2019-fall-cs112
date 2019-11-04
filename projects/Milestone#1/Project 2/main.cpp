@@ -8,7 +8,7 @@
 
   
 using namespace std;
-void removeRed(vector<int>& data);
+//void removeRed(vector<int>& data);
 
 int main(void)
 {
@@ -16,19 +16,59 @@ int main(void)
 	ifstream  myFile;
 
 
-	string x;
-	cout << "Enter source File:" << endl;
-	cin >> x;
-	cout << "Your selected source File:  " << x << endl;
 
-	myFile.open(x);
+	string s;
+	cout << "Enter source File:" << endl;
+	cin >> s;
+	cout << "Your selected source File:  " << s << endl;
+
+	myFile.open(s);
 
 	if (!myFile)
 	{
 		cout << "Not open" << endl;
 		return 0;
 	}
-	removeRed();
+	
+
+	//after reading the file and storing it in a string s for example, here how we can
+//extract the data from it in each array
+	
+	int len = s.length();
+	string r1, r2, g1, g2, b1, b2, g;
+	//taking a copy of the original picture
+	r1 = s;
+	r2 = s;
+	g1 = s;
+	g2 = s;
+	b1 = s;
+	b2 = s;
+	;
+	for (int i = 0; i < len; i++)
+	{
+		if (i % 3 == 0)
+		{
+			//for no red and negative red
+			r1[i] = 0;
+			r2[i] = 255 - r2[i];
+		}
+		if (i % 3 == 1)
+		{
+			//for no red and negative green
+			g1[i] = 0;
+			g2[i] = 255 - g2[i];
+		}
+		if (i % 3 == 2)
+		{
+			//for no red and negative blue
+			b1[i] = 0;
+			b2[i] = 255 - b2[i];
+			//for the grey scale averaging
+			g += (s[i] + s[i - 1] + s[i - 2]) / 3.0;
+		}
+	}
+	
+
 		vector<string> data;
 		while (myFile.good() == true)
 		{
@@ -67,40 +107,9 @@ int main(void)
 			}
 			
 
-			/*
-			for(int j = 2; j < data[i].size(); j++)
-			{
-				New_data = stoi(data[i]);
-				//data[i][j] = 0;
-				
-				//int old_value = New_data;
-				//int New_value = old_value - old_value;
-				//old_value = New_value;
-				cout << "The orginial Line: " << data[i] << endl;
-				cout << "j locater is at:  " << data[i][j]<< endl;
-				//cout << " 10 J value: " << data[i][j] << endl;
-
-			}
-			*/
 			
-				
-				
-
-				
-				//cout << New_value;
-				//cout<< New_data << endl;
 			
-		
-			}
-		
 			
-		
-		//cout << "The orginial Line: " << data[3] << endl;
-		//cout << New_data << endl;
-		/*for (int j = 0; j < output_data.size(); j++)
-		{
-			cout << output_data[j] << " ";
-		}*/
 	myFile.close();
 }
 
@@ -150,10 +159,4 @@ int main(void)
 
 	*/
 
-void removeRed(vector<int>& data)
-{
-	for (int i = 0; i < data.size(); i += 3)
-	{
-		data[i] == 0;
-	}
-}
+
