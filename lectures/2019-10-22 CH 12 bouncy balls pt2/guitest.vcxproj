@@ -131,6 +131,8 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Ball.hpp" />
+    <ClInclude Include="BallRenderer.hpp" />
     <ClInclude Include="BouncingBall.hpp" />
     <ClInclude Include="FL\abi-version.h" />
     <ClInclude Include="FL\dirent.h" />
@@ -277,6 +279,7 @@
     <ClInclude Include="FL\platform.H" />
     <ClInclude Include="FL\win32.H" />
     <ClInclude Include="FL\x.H" />
+    <ClInclude Include="Renderer.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FL\Makefile.in" />
