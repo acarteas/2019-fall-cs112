@@ -25,22 +25,17 @@ int main(void)
 	}
 	
 
-	//after reading the file and storing it in a string s for example, here how we can
-//extract the data from it in each array
-	
-	int len = s.length();
-	string r1, r2, g1, g2, b1, b2, g;
+
 	
 
 	vector<int> data;
 	vector<vector<int>> data1{};
-	//ppm should tell
-	int num_rows = 300;
-	int num_col = 188;
+	int num_rows;
 
-	//intailizing number of rows
 	data1.resize(num_rows);
+	//intailizing number of rows
 
+	int num_col;
 	//resize each row
 	for (int i = 0; i < num_rows; i++)
 	{
@@ -50,20 +45,31 @@ int main(void)
 	int col_counter = 0;
 	while (myFile.good() == true)
 	{
+		//intailizing number of rows
+		
 		int line;
 		myFile >> line;
-		data1[row_counter][col_counter] = line;
+		data1[1][0] = line;
 		//data1.push_back(line);
-		col_counter++;
+		for (int i; i < data[1]; i++) 
+		{
+			col_counter++;
+				
+		}
+		
 		//cout << line << endl;
 		
-		
+		for (int j; j < data[0]; j++)
+		{
+			row_counter++;
 
-	
-
+		}
+		//ppm should tell
+		int num_rows = data[1];
+		int num_col = data[2];
 	}
 
-	vector<int> output_data = data;
+
 
 
 	int x;
@@ -77,6 +83,7 @@ int main(void)
 		cout << "5 = remove green" << endl;
 		cout << "6 = Negate green" << endl;
 		cout << "7 = Grayscale" << endl;
+
 	if(x == 1)
 	{
 		RemoveRed(output_data);
