@@ -7,6 +7,7 @@ int main(void)
 {
 
 	ifstream  myFile;
+	
 
 
 
@@ -73,7 +74,7 @@ int main(void)
 
 
 	int x;
-	cout << "Enter source File:" << endl;
+	
 	cin >> x;
 	cout << "Choose what you would like to do with your image:" << endl;
 		cout << "1 = remove red" << endl;
@@ -83,36 +84,41 @@ int main(void)
 		cout << "5 = remove green" << endl;
 		cout << "6 = Negate green" << endl;
 		cout << "7 = Grayscale" << endl;
+		cin >> x;
 
 	if(x == 1)
 	{
-		RemoveRed(output_data);
+		RemoveRed(data);
 	}
 	else if (x == 2)
 	{
-		NegateRed(output_data);
+		NegateRed(data);
 	}
 	else if (x == 3)
 	{
-		RemoveGreen(output_data);
+		RemoveGreen(data);
 	}
 	else if (x == 4)
 	{
-		NegateGreen(output_data);
+		NegateGreen(data);
 	}
 	else if (x == 5)
 	{
-		RemoveBlue(output_data);
+		RemoveBlue(data);
 	}
 	else if (x == 6)
 	{
-		NegateBlue(output_data);
+		NegateBlue(data);
 	}
 	else if (x == 7)
 	{
-		Grayscale(output_data);
+		Grayscale(data);
 	}
-
+	ofstream outputFile;
+	for (int i = 0; i < data.size(); i++)
+	{
+		outputFile << data.at(i);
+	}
 
 
 	//vector<vector<int>> data1{};
@@ -147,11 +153,7 @@ int main(void)
 
 		
 	
-	ofstream outputFile;
-	for (int i = 0; i < output_data.size(); i++)
-	{
-		outputFile << output_data.at(i);
-	}
+	
 	
 	
 		
