@@ -1,3 +1,25 @@
+//Your program should prompt the user for an input and output file 
+//as well as the operation that the user would like to perform. 
+//Here's an example:
+
+//Enter source file: tinypix.ppm
+//Enter destination file: output.ppm
+
+//*** Image Effects ***
+//1. Remove Red
+//2. Remove Blue
+//3. Remove Green
+//4. Negate Red
+//5. Negate Blue
+//6. Negate Green
+//7. Grayscale
+
+//Selection: 5
+
+// Applying Negate Blue effect...
+// Done.  Program complete.
+
+
 #include "Helper.h"
 
 
@@ -7,7 +29,6 @@ int main(void)
 {
 
 	ifstream  myFile;
-	
 
 
 
@@ -74,8 +95,6 @@ int main(void)
 
 
 	int x;
-	
-	cin >> x;
 	cout << "Choose what you would like to do with your image:" << endl;
 		cout << "1 = remove red" << endl;
 		cout << "2 = Negate red" << endl;
@@ -114,11 +133,7 @@ int main(void)
 	{
 		Grayscale(data);
 	}
-	ofstream outputFile;
-	for (int i = 0; i < data.size(); i++)
-	{
-		outputFile << data.at(i);
-	}
+
 
 
 	//vector<vector<int>> data1{};
@@ -153,7 +168,11 @@ int main(void)
 
 		
 	
-	
+	ofstream outputFile;
+	for (int i = 0; i <data.size(); i++)
+	{
+		outputFile <<data.at(i);
+	}
 	
 	
 		
@@ -188,51 +207,4 @@ int main(void)
 			
 	myFile.close();
 }
-
-
-
-
-
-
-
-	
-
-
-	
-	
-
-
-
-	//string y;
-	//cout << "Enter destination file:" << endl;
-	//cin >> y;
-	//cout << "Enter source File " << x << endl;
-
-	//cout << "Program Complete." << endl;
-
-	/*
-	myFile -> string  (I want to make a copy of the orginal file )
-	
-
-	(DONE)Ask the the user to type in the file of their choice -> "tinypix.ppm"
-	print out Enter the source file and the persons input 
-			if the user inputs a file that is not in the directory 
-			print out a message saying file not included please try again.
-			else 
-			print out file was found
-
-
-	(DONE)Ask the user where they would like to put the input into a file -> "output.ppm" 
-			if the user inputs a file that is not in the directory 
-			print out a message saying file not included please try again.
-			else 
-			print out file was found 
-
-	I want to sort through the file's content 
-		
-
-	
-
-	*/
-
 
