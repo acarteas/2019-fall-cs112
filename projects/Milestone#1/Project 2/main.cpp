@@ -55,13 +55,14 @@ int main(void)
 	int num_rows = 0;
 	int num_col=0;
 
-	int row_counter = 2;
+	int row_counter = 3;
 	int col_counter = 0;
 
 	string title = "P3";
 	string current_num;
 	myFile >> current_num;
 
+	title = current_num;
 	myFile >> current_num;
 	num_rows = stoi(current_num); //debugging: current_num is 0, why?
 
@@ -69,6 +70,11 @@ int main(void)
 	myFile >> current_num; 
 	num_col = stoi(current_num);
 
+	string max_val = "255";
+	string current_num;
+	myFile >> current_num;
+
+	max_val = current_num;
 	//resize each row
 	for (int i = 0; i < num_rows; i++)
 	{
@@ -174,10 +180,15 @@ int main(void)
 	
 	ofstream outputFile;
 	// TODO: add string title as first line 
+	// add row and col num as second line with space between
+	// add maxval as third line
 	// TODO: look at row and col numbers to see where to put endl;
-	for (int i = 0; i <data.size(); i++)
+	//when grabbing the title you have put it in the 1d vector 
+	
+	for (int i = 4; i <data.size(); i++)//rest loop
 	{
 		outputFile <<data.at(i) <<" ";
+		// when (i - 4 )% col_num = 0, add endl; 
 	}
 	
 	
