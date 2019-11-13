@@ -23,7 +23,7 @@
 #include "Helper.h"
 
 
-
+using namespace std;
 
 int main(void)
 {
@@ -52,50 +52,52 @@ int main(void)
 
 	vector<int> data;
 	vector<vector<int>> data1{};
-	int num_rows;
+	int num_rows = 0;
+	int num_col=0;
 
-	data1.resize(num_rows);
-	//intailizing number of rows
+	int row_counter = 2;
+	int col_counter = 0;
 
-	int num_col;
+	string title = "P3";
+	string current_num;
+	myFile >> current_num;
+
+	myFile >> current_num;
+	num_rows = stoi(current_num); //debugging: current_num is 0, why?
+
+	data1.resize(num_rows); 
+	myFile >> current_num; 
+	num_col = stoi(current_num);
+
 	//resize each row
 	for (int i = 0; i < num_rows; i++)
 	{
 		data1[i].resize(num_col);
 	}
-	int row_counter = 0;
-	int col_counter = 0;
+
+	data1[1][0] = num_rows;
+	data1[1][1] = num_col;
+	
+	int data_counter = 0; //for 1d vector
+
 	while (myFile.good() == true)
 	{
-		//intailizing number of rows
-		
-		int line;
-		myFile >> line;
-		data1[1][0] = line;
-		//data1.push_back(line);
-		for (int i; i < data[1]; i++) 
-		{
-			col_counter++;
-				
-		}
-		
-		//cout << line << endl;
-		
-		for (int j; j < data[0]; j++)
-		{
-			row_counter++;
+		myFile >> current_num;
+		data1[row_counter][col_counter] = stoi(current_num);
 
+		data[data_counter] = stoi(current_num); // add to 1d vector
+		if (col_counter == num_col -1)
+		{
+			col_counter = 0;
+			row_counter++;
 		}
-		//ppm should tell
-		int num_rows = data[1];
-		int num_col = data[2];
 	}
 
 
 
 
 	int x;
-	cout << "Choose what you would like to do with your image:" << endl;
+		cout << "Choose what you would like to do with your image:" << endl;
 		cout << "1 = remove red" << endl;
 		cout << "2 = Negate red" << endl;
 		cout << "3 = remove blue" << endl;
@@ -107,7 +109,9 @@ int main(void)
 
 	if(x == 1)
 	{
+		cout << "Removing Red..." << endl;
 		RemoveRed(data);
+		cout << "Complete" << endl;
 	}
 	else if (x == 2)
 	{
@@ -169,9 +173,11 @@ int main(void)
 		
 	
 	ofstream outputFile;
+	// TODO: add string title as first line 
+	// TODO: look at row and col numbers to see where to put endl;
 	for (int i = 0; i <data.size(); i++)
 	{
-		outputFile <<data.at(i);
+		outputFile <<data.at(i) <<" ";
 	}
 	
 	
