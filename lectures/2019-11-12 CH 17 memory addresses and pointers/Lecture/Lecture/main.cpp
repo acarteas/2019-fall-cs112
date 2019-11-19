@@ -103,6 +103,5 @@ int main(int argc, char* argv[])
 	//to delete array pointers, use delete[]
 	delete[] int_ptr_array;
 
-
 	return 0;
 }
