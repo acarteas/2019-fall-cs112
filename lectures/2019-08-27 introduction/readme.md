@@ -5,4 +5,4 @@
 4. (p. 86 #7) Write a program that prompts the user to enter 3 strings.  Output in dictionary order.
 5. (p. 86 #8) Write a program that determines if a number is odd or even.
 6. (p. 86 #9) Write a program that converts string numbers ("zero") into their numerical equivalent (0)
-7. Write a program that converts a string-based number ("0") into its INT equivalent (0
+7. Write a program that converts a string-based number ("0") into its INT equivalent 
