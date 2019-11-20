@@ -1,0 +1,17 @@
+#Reflection PA2
+
+When first looking at this assignment it looked realively easy due to seeing similar tasks being done. The first thing I did to approach this task was to gather information
+I forgot from CS 112, such as getline, and ifstream. I know what they both were but there were some simple syntax I forgot about them both. Once I remembered their syntax and
+how they work the code itself was easy to do. After you open you ifstream most of what you do consist of using getline to read from the file than using cout to print
+to the screen the required information. It also helped me better understand the correlation of cin and getline. 
+On the other hand my biggest issue was the use of github and the turning in proccess. These were the hardest for me because I am 
+still very unfamiliar with the software which causes to look for information that I am missing. Even though it has already been 2 weeks github is still my biggest current
+challenege. The reason why it is my biggest challenge is because I do not use it enough to know all the bells and whistles of it. That being said the only
+way for me to get a better understanding of github I must use it more. Besides the challenege of gethib I really enjoyed the assignment, 
+because it reminded me of file i/o which is something I find can be really useful. For example a personal project I am doing on my personal financies. This file i/o not only helps me read from a file but write to a file, which is what my program is all about. 
+For future students my advice is to pay attention in cs 111, because if you do this assignment will be a breeze. In terms of the overall project I thought it was a good way 
+to introduce the first coding homework. Instead of overwhelming, the task was simple enough to 'warm' us up for more complex coding. It also gave me a introduction to 
+how code is going to be turned in which, is also very useful. The only critque I have is getting more prior knowledge on github and the whole process. 
+
+#link to code:
+https://github.com/JordonBruton/2019-fall-cs112/blob/master/projects/code%20PA2.gif

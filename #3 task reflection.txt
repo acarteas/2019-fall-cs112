@@ -1,0 +1,26 @@
+# Task 3 Reflection 
+
+## 
+My first look at this assignment caught me off guard completly. We were introducted to something 
+that I personally have never messed with so I was worried about how I was going to do this assignment. At 
+first I thought we were going to discuss more about it, but that ended up not being the case. This worried
+me and took me awhile to wrap my head around the purpose of doing so. The task at hand seemed like one 
+I would not end up finishing, because there was so much uncertainty I had about it. 
+    As time went on I ran into more and more issues, some were minor and some were a lot more complex. Starting with minor
+issues, one invovled the first task. It seemed easy because we went over it prefiely but I found out
+that it was not and took some research to complete it. It had me researching certain vocab such as 
+branches, forks, and repository itself. Onto more complex ideas like the second task. This task to me 
+was one of the harded ones because there was so many questions that needed to be answered in order to
+finish it. The first thing was to just understand what the question was asking, what the some of the 
+words meant, and how do I go about it. After doing this process I started my research so I can
+answer all of these questions and once I had them all answered that is when I started to do 
+the task. Within hours of time and research I ended up figuring it out. 
+    My advice for future students is getting a group together with other students because 
+some of the other students might have knowledge that they can give you about the assignment. 
+Another thing I recommend is using the teacher a lot more than what I did. It will make
+the process a lot easier than it was for me, but that being said I got a lot more out of it
+when solving the issue mostly by myself. This is not something that is easy to grasp so you
+need to practice and keep practicing. 
+    The most difficult aspect for this assignment is task number two because of all the 
+the knowledge we are missing. My recomandation would be to go over simple things of github
+and vocab so we have somehwere to start.
