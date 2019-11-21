@@ -1,6 +1,7 @@
 #pragma once
+#include <exception>
 #include "ListNode.hpp"
-
+using namespace std;
 template <typename DATA_TYPE>
 class LinkedList
 {
@@ -30,19 +31,58 @@ public:
 	//lecture TODO: find smallest item in linked list
 	DATA_TYPE& findSmallest()
 	{
-		return _front->getValue();
+		ListNode<DATA_TYPE>* current = _front;
+		DATA_TYPE current_smallest = current->getValue();
+		while (current->getNext() != nullptr)
+		{
+			if (current_smallest > current->getValue())
+			{
+				current_smallest = current->getValue();
+			}
+			current = current->getNext();
+		}
+		return current_smallest;
 	}
 
 	//lecture TODO: calculate average value in linked list
 	double calculateAverage()
 	{
-		return 0.0;
+		if (_front == nullptr)
+		{
+			return 0.0;
+		}
+		ListNode<DATA_TYPE>* current = _front;
+		double sum = 0.0;
+		int counter = 0;
+		for (; current->getNext() != nullptr; counter++)
+		{
+			sum += current->getValue();
+			current = current->getNext();
+		}
+		return sum / (double)counter;
 	}
 
 	//lecture TODO: remove Nth item from LL
 	void removeElementAt(int location)
 	{
-
+		ListNode<DATA_TYPE>* current = _front;
+		ListNode<DATA_TYPE>* next = nullptr;
+		int counter = 0;
+		for (int i = 0; current != nullptr && i < location - 1; i++)
+		{
+			current = current->getNext();
+		}
+		if (current != nullptr && current->getNext() != nullptr)
+		{
+			next = current->getNext();
+			current->setNext(next->getNext());
+			delete next;
+		}
+		else
+		{
+			throw exception{ "Invalid location" };
+			return;
+		}
 	}
 
 
@@ -66,7 +106,7 @@ public:
 		}
 		return *this;
 	}
-	
+
 
 	//delete all nodes in linked list when the variable
 	//goes out of scope
@@ -90,7 +130,7 @@ public:
 			counter++;
 			current = current->getNext();
 		}
-		
+
 		//make a mirror
 		for (int i = counter; i >= 0; i--)
 		{
@@ -104,7 +144,7 @@ public:
 		}
 
 		//remove original items
-		for (int i = 0; i < counter; i++)
+		for (int i = 0; i <= counter; i++)
 		{
 			removeValue(_front->getValue());
 		}
