@@ -1,4 +1,5 @@
 #pragma once
+#include<exception>
 #include "ListNode.hpp"
 
 template <typename DATA_TYPE>
@@ -30,18 +31,79 @@ public:
 	//lecture TODO: find smallest item in linked list
 	DATA_TYPE& findSmallest()
 	{
+		ListNode<DATA_TYPE>* current = to_copy._front;
+		DATA_TYPE smallest_number = current->getValue();
+		
+		while (current->getNext() != nullptr)
+		{
+			
+
+			smallest_number = current->getNext();
+
+			if (current < smallest_number)
+			{
+				smallest_number = current->getNext();
+			}
+
+			current->getNext();
+			
+			return smallest_number;
+		}
+
 		return _front->getValue();
 	}
 
 	//lecture TODO: calculate average value in linked list
 	double calculateAverage()
 	{
+		ListNode<DATA_TYPE>* current = to_copy._front;
+		int total = 0;
+		int average = 0; 
+		int counter = 0;
+		if (_front == nullptr)
+		{
+			return 0; 
+		}
+
+		while (current =! nullptr)
+		{
+			counter++;
+
+			current->getNext();
+
+			total = current + current->getValue();
+
+		}
+
+		average = total / counter++;
+
+		
+
 		return 0.0;
 	}
 
 	//lecture TODO: remove Nth item from LL
 	void removeElementAt(int location)
 	{
+		ListNode<DATA_TYPE>* current = to_copy._front;
+		ListNode<DATA_TYPE>* next = nullptr;
+
+		for (int i = 0; i < location - 1; 1++)
+		{
+			current = current->getNext();
+		}
+
+		if (current != nullptr && current->getNext() != nullptr)
+		{
+			next = current->getNext();
+			current->setNext(next->getNext());
+			delete next;
+		}
+		else
+		{
+			throw exception{ "Invalid location" };
+			return;
+		}
 
 	}
 

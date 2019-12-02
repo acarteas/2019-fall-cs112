@@ -44,7 +44,8 @@ To pixelate an image, take a reference pixel P and a distance D and make all pix
 |9|9|11|11|
 
 Note that for the image above, I used a distance D of 5.  Try playing around with different distance values.
-![Pixelate](bunny2_pixelate.png) 
+![Pixe
+late](bunny2_pixelate.png) 
 
 ## 5. Rotate 90
 This one is probably the most conceptually difficult.  Essentially, you will need to turn the first row into the last column, the 2nd row into the 2nd to last column, etc. until you turn the last row into the first column.  Remembrer to also change your image's dimensions (2nd line in PPM file)! Consider the following grid:
