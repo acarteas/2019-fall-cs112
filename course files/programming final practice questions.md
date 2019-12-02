@@ -9,12 +9,14 @@ Use the following guide to help you study for the programming final.
 
 
 Questions #1-3 use the following class definition to build linked lists:
+```
 class ListNode
 {
 public:
    int value;
    ListNode *next = nullptr;
 };
+```
 
 
 
