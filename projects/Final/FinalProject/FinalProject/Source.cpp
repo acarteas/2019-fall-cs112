@@ -10,12 +10,13 @@ int main()
 	ListNode* temp = new ListNode;
 	head->next = temp;
 
-	while(n)
+	//while()
+	// My checker cout << "it runs";
 
 	return 0;
 }
-int deleteNode(ListNode* front, int value)
-{
+//int deleteNode(ListNode* front, int value)
+//{
 	
 	
-}
+//}
