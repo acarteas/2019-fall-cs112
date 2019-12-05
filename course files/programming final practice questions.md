@@ -24,7 +24,7 @@ public:
 Write a function called ```int deleteNode(ListNode *front, int value)``` that removes the first occurrence of the specified value from the linked list.  The function should return the index of the item that was deleted or -1 if nothing was deleted.
 
 ### Question 2: Linked List to Vector
-Write a function called ```vector<int> toArray(ListNode *front)``` that converts the supplied linked list into a vector.  Note: you are not allowed to use STL vectors for this task.
+Write a function called ```vector<int> toArray(ListNode *front)``` that converts the supplied linked list into a vector.  
 
 ### Question 3: Reverse Linked List
 Write a funciton called ```ListNode reverse(ListNode *head)```.  The function should return the front of the new list.  E.g. Calling reverse on 1->2->3->4 should return a node value 4 who points to 3->2->1
@@ -43,7 +43,7 @@ Write a function called ```vector<int> difference(vector<int> first, vector<int>
 Write a function called ```char toUpper(char ch)``` that accepts a single character and returns its upper-case equivalent.  Non-characters should not be converted.  E.g., the character 'b' would be converted to 'B' whereas the character '$' would remain '$'.
 
 ### Question 8: File I/O
-Complete a function that most commonly repeating integer in a supplied text file.  Example function prototype:
+Complete a function that finds the most commonly repeating integer in a supplied text file.  Example function prototype:
 ```
 int findMode(string input_file) {}
 ```
