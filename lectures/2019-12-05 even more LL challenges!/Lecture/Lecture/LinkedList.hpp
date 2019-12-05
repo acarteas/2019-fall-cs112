@@ -1,4 +1,4 @@
-#pragma once
+// #pragma once
 #include <exception>
 #include "ListNode.hpp"
 using namespace std;
@@ -80,7 +80,7 @@ public:
 		}
 		else
 		{
-			throw exception{ "Invalid location" };
+			//throw exception{ "Invalid location" };
 			return;
 		}
 	}
@@ -229,9 +229,30 @@ public:
 
 	//12/5 TODO
 	//remove all duplicate values from the LL
-	void removeDuplicats()
+	void removeDuplicates()
 	{
+		ListNode<DATA_TYPE>* current = _front;
 
+		while (current->getNext() != nullptr)
+		{
+			ListNode<DATA_TYPE>* next = current->getNext();
+
+			while (next->getNext() != nullptr)
+			{
+				if(next->getValue() == current->getValue())
+				{
+					ListNode<DATA_TYPE>* link = next->getNext();
+					delete next;
+					current->setNext(link);
+				}
+				else
+				{
+					next = next->getNext();
+				}
+			}
+			current = current->getNext();
+			next = current->getNext();
+		}
 	}
 
 	//12/5 TODO
@@ -251,10 +272,10 @@ public:
 	}
 
 	//returns the number of items that are smaller than the supplied value
-	int smallerThan(const DATA_TYPE& value)
-	{
+	//int smallerThan(const DATA_TYPE& value)
+	//{
 
-	}
+	//}
 
 	void addValue(const DATA_TYPE& value)
 	{
