@@ -8,6 +8,35 @@ class LinkedList
 private:
 	ListNode<DATA_TYPE>* _front = nullptr;
 
+	bool removeValue(const DATA_TYPE& value, ListNode<T>* start)
+	{
+		ListNode<DATA_TYPE>* current = start;
+		ListNode<DATA_TYPE>* before = nullptr;
+		while (current != nullptr && current->getValue() != value)
+		{
+			before = current;
+			current = current->getNext();
+		}
+
+		//non-null current means that we found a value to delete
+		if (current != nullptr)
+		{
+			//current is now the box to delete
+			//before is the box that will "jump" over current
+			before->setNext(current->getNext());
+
+			//delete unneeded node
+			delete current;
+
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+
+	}
+
 public:
 	LinkedList()
 	{
@@ -199,39 +228,19 @@ public:
 			_front = new_front;
 			return true;
 		}
-
-		ListNode<DATA_TYPE>* current = _front;
-		ListNode<DATA_TYPE>* before = nullptr;
-		while (current != nullptr && current->getValue() != value)
-		{
-			before = current;
-			current = current->getNext();
-		}
-
-		//non-null current means that we found a value to delete
-		if (current != nullptr)
-		{
-			//current is now the box to delete
-			//before is the box that will "jump" over current
-			before->setNext(current->getNext());
-
-			//delete unneeded node
-			delete current;
-
-			return true;
-		}
-		else
-		{
-			return false;
-		}
-
+		return removeValue(value, _front);
 	}
 
 	//12/5 TODO
 	//remove all duplicate values from the LL
 	void removeDuplicats()
 	{
-
+		ListNode<DATA_TYPE>* current = _front;
+		while (current != nullptr)
+		{
+			while (removeValue(current->getValue(), current->getNext()) == true);
+			current = current->getNext();
+		}
 	}
 
 	//12/5 TODO
