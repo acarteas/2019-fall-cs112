@@ -1,7 +1,7 @@
 #pragma once
  class ListNode 
  {
- public: 
-	 int value; 
+ public:
+	 int value;
 	 ListNode* next = nullptr;
  };
