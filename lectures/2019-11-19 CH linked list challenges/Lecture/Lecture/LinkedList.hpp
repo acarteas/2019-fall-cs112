@@ -1,7 +1,6 @@
 #pragma once
 #include<exception>
 #include "ListNode.hpp"
-
 template <typename DATA_TYPE>
 class LinkedList
 {
@@ -49,8 +48,6 @@ public:
 			
 			return smallest_number;
 		}
-
-		return _front->getValue();
 	}
 
 	//lecture TODO: calculate average value in linked list
@@ -79,7 +76,6 @@ public:
 
 		
 
-		return 0.0;
 	}
 
 	//lecture TODO: remove Nth item from LL
@@ -104,7 +100,6 @@ public:
 			throw exception{ "Invalid location" };
 			return;
 		}
-
 	}
 
 
@@ -128,7 +123,6 @@ public:
 		}
 		return *this;
 	}
-	
 
 	//delete all nodes in linked list when the variable
 	//goes out of scope
@@ -152,7 +146,6 @@ public:
 			counter++;
 			current = current->getNext();
 		}
-		
 		//make a mirror
 		for (int i = counter; i >= 0; i--)
 		{
@@ -166,10 +159,6 @@ public:
 		}
 
 		//remove original items
-		for (int i = 0; i < counter; i++)
-		{
-			removeValue(_front->getValue());
-		}
 	}
 
 	//AT HOME TASK: try writing 
