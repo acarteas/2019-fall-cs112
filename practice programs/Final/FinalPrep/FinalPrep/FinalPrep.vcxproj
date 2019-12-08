@@ -126,6 +126,7 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="sents.txt" />
     <Text Include="something.txt" />
   </ItemGroup>
   <ItemGroup>

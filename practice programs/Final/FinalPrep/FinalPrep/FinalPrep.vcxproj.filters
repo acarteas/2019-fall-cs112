@@ -23,6 +23,9 @@
     <Text Include="something.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="sents.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ListNode.hpp">

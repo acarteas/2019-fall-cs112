@@ -38,13 +38,28 @@ int deleteNode(ListNode* front, int value) {
 	}
 }
 
-/*vector<int> toArray(ListNode* front) {
-
+vector<int> toArray(ListNode* front) {
+	vector<int> array{};
+	ListNode* current = front;
+	while (current != nullptr) {
+		array.push_back(current->value);
+		current = current->next;
+	}
+	return array;
 }
 
 ListNode reverse(ListNode* head) {
-
-}*/
+	ListNode* current = head;
+	ListNode* prev = nullptr;
+	ListNode* next = head;
+	while (current != nullptr) {
+		next = current->next;
+		current->next = prev;
+		prev = current;
+		current = next;
+	}
+	return *prev;
+}
 
 string flipText(string text) {
 	string str = text;
@@ -130,6 +145,7 @@ int findMode(string input_file) {
 
 void findLongSentences(string input_file, int sentence_length) {
 	ifstream stream{ input_file };
+	vector<vector<string>> wordsandsents{};
 	while (stream.good() == true) {
 		string temp;
 		getline(stream, temp);
@@ -140,8 +156,16 @@ void findLongSentences(string input_file, int sentence_length) {
 			words >> word;
 			temp_vect.push_back(word);
 		}
+		wordsandsents.push_back(temp_vect);
 		temp_vect.clear();
-		// INCOMPLETE!!!!!!!!!!!!!!!!!!!!!!
+	}
+	for (int i = 0; i < wordsandsents.size(); i++) {
+		if (wordsandsents[i].size() > sentence_length) {
+			for (int j = 0; j < wordsandsents[i].size(); j++) {
+				cout << wordsandsents[i][j] << " ";
+			}
+			cout << endl;
+		}
 	}
 }
 
@@ -162,15 +186,20 @@ int main(){
 
 	
 	
-	cout << deleteNode(hello, 3) << endl;
+	// cout << deleteNode(hello, 3) << endl;
 
-	for (int i = 0; i < 4; i++) {
-		
-	}
+	
 	// Question 2:
 
+	//vector<int> array1 = toArray(hello);
+	//for(int i = 0; i < array1.size(); i++) {
+	//	cout << array1[i] << " ";
+	//}
+	//cout << endl;
 
 	// Question 3:
+	ListNode newll = reverse(hello);
+	cout << newll.value << endl;
 
 
 	// Question 4:
@@ -198,10 +227,5 @@ int main(){
 
 	// Question 9:
 
-
-
-	
-	
-	
-	
+	findLongSentences("sents.txt", 5);	
 }
