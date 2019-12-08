@@ -2,7 +2,49 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
+#include "ListNode.hpp"
+
 using namespace std;
+
+int deleteNode(ListNode* front, int value) {
+	int counter = 1;
+	ListNode* current = front;
+	ListNode* prev = front;
+	bool removed = false;
+	if (current == nullptr) {
+		return -1;
+	}
+	while (current != nullptr) {
+		if (current->value == value && removed == false) {
+			current = current->next;
+			prev->next = current;
+			removed = true;
+		}
+		else if (removed == false) {
+			prev = current;
+			current = current->next;
+			counter++;
+		}
+		else {
+			prev = current;
+			current = current->next;
+		}
+	}
+	if (removed == true) {
+		return counter;
+	}
+	else {
+		return -1;
+	}
+}
+
+/*vector<int> toArray(ListNode* front) {
+
+}
+
+ListNode reverse(ListNode* head) {
+
+}*/
 
 string flipText(string text) {
 	string str = text;
@@ -31,7 +73,7 @@ vector<int> difference(vector<int> first, vector<int> second) {
 				flag_matched == true;
 			}
 		}
-		if (flag_matched == true)
+		if (flag_matched == false)
 		{
 			new_vect.push_back(first[i]);
 		}
@@ -104,15 +146,62 @@ void findLongSentences(string input_file, int sentence_length) {
 }
 
 int main(){
-	int integer = findMode("something.txt");
-	cout << integer << endl;
-	char cha = toUpper('z');
-	cout << cha << endl;
+
+	// Question 1:
+	ListNode start;
+	start.value = 6;
+	ListNode two;
+	two.value = 3;
+	ListNode three;
+	three.value = 4;
+	ListNode* hello = &start;
+	ListNode* hello2 = &two;
+	ListNode* hello3 = &three;
+	hello->next = &two;
+	hello2->next = &three;
+
+	
+	
+	cout << deleteNode(hello, 3) << endl;
+
+	for (int i = 0; i < 4; i++) {
+		
+	}
+	// Question 2:
+
+
+	// Question 3:
+
+
+	// Question 4:
 	string newtext = flipText("Hello");
+
+	// Question 5:
+
+
+	// Question 6:
 	vector<int> first{ 2, 3, 4, 5, 6 };
 	vector<int> second{ 9, 4, 2, 10, 100, 6, 7, 9, 3 };
 	vector<int> difference_vect = difference(first, second);
 	for (int i = 0; i < difference_vect.size(); i++) {
 		cout << difference_vect[i];
 	}
+	cout << endl;
+
+	// Question 7:
+	int integer = findMode("something.txt");
+	cout << integer << endl;
+
+	// Question 8:
+	char cha = toUpper('z');
+	cout << cha << endl;
+
+	// Question 9:
+
+
+
+	
+	
+	
+	
 }
