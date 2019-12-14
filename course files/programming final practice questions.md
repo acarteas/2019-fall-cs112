@@ -1,4 +1,4 @@
-# CS 112 Midterm
+# CS 112 Final Questions
 Use the following guide to help you study for the programming final.
 
 ## Rules
