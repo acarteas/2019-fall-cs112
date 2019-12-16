@@ -7,47 +7,89 @@
 
 using namespace std;
 //Question 1
-int deleteNode(ListNode* front, int value) {
+int deleteNode(ListNode* front, int value)
+{
 	int counter = 1;
 	ListNode* current = front;
 	ListNode* prev = front;
-	bool removed = false;
-	if (current == nullptr) {
-		return -1;
-	}
-	while (current != nullptr) {
-		if (current->value == value && removed == false) {
+	bool remove_index = false;
+	while (current != nullptr)
+	{
+		if (current->value == value && remove_index == false)
+		{
 			current = current->next;
 			prev->next = current;
-			removed = true;
+			remove_index = true;
 		}
-		else if (removed == false) {
+		else if(remove_index == false)
+		{
 			prev = current;
 			current = current->next;
 			counter++;
 		}
-		else {
-			prev = current;
-			current = current->next;
+		if (remove_index == true)
+		{
+			return counter;
+		}
+		else
+		{
+			return -1;
 		}
 	}
-	if (removed == true) {
-		return counter;
-	}
-	else {
-		return -1;
-	}
 }
-// Question 2
-vector<int> toArray(ListNode* front) {
+
+
+//Question 2
+vector<int> toArray(ListNode* front)
+{
 	vector<int> array{};
 	ListNode* current = front;
-	while (current != nullptr) {
+	while (current != nullptr)
+	{
 		array.push_back(current->value);
 		current = current->next;
 	}
 	return array;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//------------------------------------------------------
 //Question 3
 ListNode reverse(ListNode* head) {
 	ListNode* current = head;
