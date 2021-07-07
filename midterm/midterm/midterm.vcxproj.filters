@@ -18,27 +18,21 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HelperFunctions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main_test.cpp">
+    <ClCompile Include="midterm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="FirstNames.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="LastNames.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
+    <ClInclude Include="midterm.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="HelperFunctions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="main_test.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <Text Include="numbers.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="output.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

@@ -15,29 +15,46 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <None Include="output.ppm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="tinypix.ppm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="bunny.ppm">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HelperFunctions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main_test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="FirstNames.txt">
+    <Image Include="bunny_grayscale.png">
       <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="LastNames.txt">
+    </Image>
+    <Image Include="bunny_negate_blue.png">
       <Filter>Resource Files</Filter>
-    </Text>
+    </Image>
+    <Image Include="bunny_negate_green.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bunny_negate_red.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bunny_remove_blue.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bunny_remove_green.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bunny_remove_red.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="HelperFunctions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="main_test.h">
+    <ClInclude Include="Helper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{90BB1B25-3F6E-424D-9275-4B9B19C0DBFF}</ProjectGuid>
-    <RootNamespace>Lecture</RootNamespace>
+    <ProjectGuid>{5EB3F687-0EC0-4415-A279-B8E42314AADC}</ProjectGuid>
+    <RootNamespace>OCTOBER1NOTES</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -123,17 +123,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="HelperFunctions.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="main_test.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="FirstNames.txt" />
-    <Text Include="LastNames.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="main_test.h" />
-    <ClInclude Include="HelperFunctions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
